@@ -2162,6 +2162,20 @@
 
     <!-- js for home animation -->
     <script src="/js/jquery.min.hero.js"></script>
+    <script>
+      (function () {
+        // Capture the hero jQuery instance and restore the previous global jQuery
+        var hero = jQuery.noConflict(true);
+        window.jQueryHero = hero;
+        window.$hero = hero;
+        // Save current globals (main site jQuery) so we can restore later
+        window._prevJQ = window.jQuery;
+        window._prev$ = window.$;
+        // Temporarily make hero jQuery the global jQuery for following slider scripts
+        window.jQuery = hero;
+        window.$ = hero;
+      })();
+    </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/jquery.validate.min.js"></script>
@@ -2185,6 +2199,17 @@
     <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
     <script src="js/rev-slider/revolution.extension.video.min.js"></script>
     <script src="js/interface.js"></script>
+    <script>
+      (function () {
+        // Restore main/global jQuery after rev-slider and interface scripts have loaded
+        window.jQuery = window._prevJQ;
+        window.$ = window._prev$;
+        try {
+          delete window._prevJQ;
+          delete window._prev$;
+        } catch (e) {}
+      })();
+    </script>
   </body>
   <!-- js for home animation -->
 </html>
