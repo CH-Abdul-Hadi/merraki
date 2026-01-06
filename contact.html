@@ -55,7 +55,134 @@
 
   <body>
     <!-- Header  -->
-    <div class="sub-banner" >
+    <header
+      id="top"
+      class="header-home"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: rgba(50, 50, 50, 0.95)!important;
+        padding-bottom: 20px;
+        height: 90px;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          z-index: 4;
+          left: 0;
+          top: 0;
+          width: 45.47vmin;
+          height: 40.7vmin;
+          padding: 4.8vmin 2em 4.8vmin;
+          background-color: transparent;
+          text-align: center;
+          transition: all 0.3s;
+        "
+      >
+        <a href="#top" class="brand js-target-scroll">
+          <span>Rcubes Design</span>
+        </a>
+        <div class="brand-name">Rcubes design</div>
+        <!-- <div class="slide-number">
+          <span class="current-number" style="color: #e1b261"
+            >0<span class="count">1</span></span
+          >
+          <sup
+            ><span class="delimiter">/</span> 0<span
+              class="total-count"
+            ></span
+          ></sup>
+        </div> -->
+      </div>
+      <!-- <div class="header-phone">+92-346-5564074</div> -->
+      <!-- <div class="vertical-panel"></div> -->
+      <!-- <div class="vertical-panel-content">
+        <div class="vertical-panel-info">
+          <div class="vertical-panel-title">Rcubes design</div>
+          <div class="line"></div>
+        </div>
+        <ul class="social-list">
+          <li><a href="" class="fa fa-instagram"></a></li>
+          <li><a href="" class="fa fa-twitter"></a></li>
+          <li><a href="" class="fa fa-behance"></a></li>
+          <li><a href="" class="fa fa-facebook"></a></li>
+        </ul>
+      </div> -->
+
+      <!-- Navigation Desctop -->
+
+      <nav class="navbar-desctop visible-md visible-lg">
+        <div class="container">
+          <a href="#top" class="brand js-target-scroll">
+            <span class="text-primary"></span>Rcubes design
+          </a>
+          <ul class="nav navbar-desctop-menu">
+            <li class="active">
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./index.html#about">About</a>
+            </li>
+            <li>
+              <a href="./portfolio.html">Projects</a>
+            </li>
+            <li>
+              <a href="./index.html#services">Services</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Navigation Mobile -->
+
+      <nav class="nav navbar-mobile">
+        <a href="#top" class="brand js-target-scroll">
+          <span >Rcubes design</span>
+        </a>
+
+        <!-- Navbar Collapse -->
+
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#navbar-mobile"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-mobile">
+          <ul class="navbar-nav-mobile">
+            <li class="active">
+              <a href="#top">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#clients">Clients</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="sub-banner">
       <figure class="light-image mb-0">
         <img
           src="./assets/images/top-lightimage.png"
@@ -63,107 +190,7 @@
           class="img-fluid"
         />
       </figure>
-      <header id="top" class="header-home" style="overflow-x: hidden">
-        <div class="brand-panel" > 
-          <a href="#top" class="brand js-target-scroll">
-            <span >Rcubes Design</span>
-          </a>
-          <div class="brand-name">Rcubes design</div>
-          <!-- <div class="slide-number">
-            <span class="current-number" style="color: #e1b261"
-              >0<span class="count">1</span></span
-            >
-            <sup
-              ><span class="delimiter">/</span> 0<span
-                class="total-count"
-              ></span
-            ></sup>
-          </div> -->
-        </div>
-        <div class="header-phone">+92-346-5564074</div>
-        <div class="vertical-panel"></div>
-        <div class="vertical-panel-content">
-          <div class="vertical-panel-info">
-            <div class="vertical-panel-title">Rcubes design</div>
-            <div class="line"></div>
-          </div>
-          <ul class="social-list">
-            <li><a href="" class="fa fa-instagram"></a></li>
-            <li><a href="" class="fa fa-twitter"></a></li>
-            <li><a href="" class="fa fa-behance"></a></li>
-            <li><a href="" class="fa fa-facebook"></a></li>
-          </ul>
-        </div>
 
-        <!-- Navigation Desctop -->
-
-        <nav class="navbar-desctop visible-md visible-lg">
-          <div class="container">
-            <a href="#top" class="brand js-target-scroll">
-              <span class="text-primary"></span>Rcubes design
-            </a>
-            <ul class="nav navbar-desctop-menu">
-              <li class="active">
-                <a href="./index.html">Home</a>
-              </li>
-              <li>
-                <a href="./index.html#about">About</a>
-              </li>
-              <li>
-                <a href="./portfolio.html">Projects</a>
-              </li>
-              <li>
-                <a href="./index.html#services">Services</a>
-              </li>
-              <li>
-                <a href="./contact.html">Contacts</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <!-- Navigation Mobile -->
-
-        <nav class="nav navbar-mobile">
-          <a href="#top" class="brand js-target-scroll">
-            <span class="text-primary"></span>Rcubes design
-          </a>
-
-          <!-- Navbar Collapse -->
-
-          <button
-            type="button"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar-mobile"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbar-mobile">
-            <ul class="navbar-nav-mobile">
-              <li class="active">
-                <a href="#top">Home</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#clients">Clients</a>
-              </li>
-              <li>
-                <a href="./contact.html">Contacts</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
       <section class="banner-section" style="padding-top: 250px; height: 100vh">
         <div class="container-fluid">
           <div class="row">
@@ -171,26 +198,27 @@
               class="col-lg-5 col-md-12 col-sm-12 col-12 order-lg-1 order-2 banner-column"
             >
               <div class="banner_content" data-aos="fade-left">
-                
+                  <div class="content">
+                    <h1>Contact Us</h1>
+                    <p>
+                      Guis aute irure dolor in rearehenderit in eouta velireu
+                      esse fugiat nulla pariatur.
+                    </p>
+                    <div class="box">
+                      <span class="mb-0">Home</span>
+                      <span class="mb-0 dash">-</span>
+                      <span class="mb-0 box_span">Contact</span>
+                    </div>
+                  </div>
               </div>
             </div>
             <div class="col-lg-7 col-md-12 col-sm-12 col-12 order-lg-2 order-1">
               <div class="banner_wrapper">
-              
-              <div class="banner_content" data-aos="fade-left">
-                <div class="content">
-                  <h1>Contact Us</h1>
-                  <p>
-                    Guis aute irure dolor in rearehenderit in eouta velireu esse
-                    fugiat nulla pariatur.
-                  </p>
-                  <div class="box">
-                    <span class="mb-0">Home</span>
-                    <span class="mb-0 dash">-</span>
-                    <span class="mb-0 box_span">Contact</span>
-                  </div>
+                <div class="banner_content" data-aos="fade-left">
+                 <figure class="sub-bannerimage mb-0" data-aos="fade-up">
+                            <img src="./assets/images/portfolio-bannerimage.jpg" alt="" class="img-fluid">
+                        </figure>
                 </div>
-              </div>
               </div>
             </div>
           </div>
@@ -239,14 +267,14 @@
               </div>
               <h5>Email:</h5>
               <a
-                href="mailto:support@merraki.com"
-                class="mb-0 text-decoration-none text-size-18"
-                >support@merraki.com</a
+                href="mailto:contact@rcubesdesign.com"
+                class="text-size-16 mb-0 text-decoration-none"
+                >contact@rcubesdesign.com</a
               >
               <a
-                href="mailto:merraki@gmail.com"
-                class="mb-0 text-decoration-none text-size-18"
-                >merraki@gmail.com</a
+                href="mailto:rcubesdesign@gmail.com"
+                class="text-size-16 mb-0 text-decoration-none"
+                >rcubesdesign@gmail.com</a
               >
             </div>
           </div>
@@ -263,14 +291,14 @@
               </div>
               <h5>Phone:</h5>
               <a
-                href="tel:+01234567899"
+                href="tel:+923465564074"
                 class="mb-0 text-decoration-none text-size-18"
-                >+012 (345) 678 99</a
+                >+92 346 5564074</a
               >
               <a
-                href="tel:+1234567847858"
+                href="tel:+923465564074"
                 class="mb-0 text-decoration-none text-size-18"
-                >+12345678 478 58</a
+                >+92 346 5564074</a
               >
             </div>
           </div>
@@ -373,7 +401,7 @@
       </div>
     </div>
     <!-- Footer -->
-    <section class="footer-section">
+    <section class="footer-section" style="overflow-x: hidden">
       <div class="container">
         <div class="middle-portion">
           <div class="row">
@@ -382,7 +410,7 @@
                 <a href="./index.html">
                   <figure class="footer-logo">
                     <img
-                      src="./assets/images/logo.png"
+                      src="./assets/images/Rcube_logo.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -428,7 +456,7 @@
                     <a
                       class="text-size-16 mb-0 text-decoration-none"
                       href="tel:+568925896325"
-                      >+5689 2589 6325</a
+                      >+92 346 5564074</a
                     >
                   </div>
                 </div>
@@ -458,9 +486,14 @@
                   <div class="content">
                     <span class="text-size-16">Email us at:</span>
                     <a
-                      href="mailto:info@merrakiinteriors.com"
+                      href="mailto:contact@rcubesdesign.com"
                       class="text-size-16 mb-0 text-decoration-none"
-                      >info@merrakiinteriors.com</a
+                      >contact@rcubesdesign.com</a
+                    >
+                    <a
+                      href="mailto:rcubesdesign@gmail.com"
+                      class="text-size-16 mb-0 text-decoration-none"
+                      >rcubesdesign@gmail.com</a
                     >
                   </div>
                 </div>
@@ -484,8 +517,8 @@
                 </form>
                 <ul class="list-unstyled mb-0">
                   <li class="text">
-                    <i class="circle fa-duotone fa-check"></i>Quis autem vel eum
-                    iure reprehenderit rui in ea voluptate velit esse.
+                    Subscribe to our newsletter to receive the latest news and
+                    exclusive offers directly in your inbox.
                   </li>
                 </ul>
                 <div class="social-icons position-relative">
@@ -530,7 +563,7 @@
           <div class="row">
             <div class="col-12">
               <p class="text-size-14">
-                Copyright © 2023 merrakiinteriors All rights reserved.
+                Copyright © 2023 Rcubes Design All rights reserved.
               </p>
             </div>
           </div>

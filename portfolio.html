@@ -1,83 +1,14 @@
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
-    <title>Portfolio | Merraki Interiors</title>
+    <title>Portfolio | Rcubes Design</title>
     <!-- /SEO Ultimate -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
     />
     <meta charset="utf-8" />
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="assets/images/favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="assets/images/favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="assets/images/favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="assets/images/favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="assets/images/favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="assets/images/favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="assets/images/favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="assets/images/favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="assets/images/favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="assets/images/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/images/favicon/manifest.json" />
+    <link rel="shortcut icon" href="./assets/images/Rcube_logo.png" type="image/x-icon">
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
@@ -119,21 +50,39 @@
 
   <body>
     <!-- Header  -->
-    <div class="sub-banner">
-      <figure class="light-image mb-0">
-        <img
-          src="./assets/images/top-lightimage.png"
-          alt=""
-          class="img-fluid"
-        />
-      </figure>
-      <header id="top" class="header-home" style="overflow-x: hidden">
-        <div class="brand-panel">
-          <a href="#top" class="brand js-target-scroll">
-            <span>Rcubes Design</span>
-          </a>
-          <div class="brand-name">Rcubes design</div>
-          <!-- <div class="slide-number">
+    <header
+      id="top"
+      class="header-home"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: rgba(50, 50, 50, 0.95) !important;
+        padding-bottom: 20px;
+        height: 90px;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          z-index: 4;
+          left: 0;
+          top: 0;
+          width: 45.47vmin;
+          height: 40.7vmin;
+          padding: 4.8vmin 2em 4.8vmin;
+          background-color: transparent;
+          text-align: center;
+          transition: all 0.3s;
+        "
+      >
+        <a href="#top" class="brand js-target-scroll">
+          <span>Rcubes Design</span>
+        </a>
+        <div class="brand-name">Rcubes design</div>
+        <!-- <div class="slide-number">
             <span class="current-number" style="color: #e1b261"
               >0<span class="count">1</span></span
             >
@@ -143,116 +92,129 @@
               ></span
             ></sup>
           </div> -->
+      </div>
+      <!-- <div class="header-phone">+92-346-5564074</div> -->
+      <!-- <div class="vertical-panel"></div>
+      <div class="vertical-panel-content">
+        <div class="vertical-panel-info">
+          <div class="vertical-panel-title">Rcubes design</div>
+          <div class="line"></div>
         </div>
-        <div class="header-phone">+92-346-5564074</div>
-        <div class="vertical-panel"></div>
-        <div class="vertical-panel-content">
-          <div class="vertical-panel-info">
-            <div class="vertical-panel-title">Rcubes design</div>
-            <div class="line"></div>
-          </div>
-          <ul class="social-list">
-            <li><a href="" class="fa fa-instagram"></a></li>
-            <li><a href="" class="fa fa-twitter"></a></li>
-            <li><a href="" class="fa fa-behance"></a></li>
-            <li><a href="" class="fa fa-facebook"></a></li>
+        <ul class="social-list">
+          <li><a href="" class="fa fa-instagram"></a></li>
+          <li><a href="" class="fa fa-twitter"></a></li>
+          <li><a href="" class="fa fa-behance"></a></li>
+          <li><a href="" class="fa fa-facebook"></a></li>
+        </ul> -->
+
+      <!-- Navigation Desctop -->
+
+      <nav class="navbar-desctop visible-md visible-lg">
+        <div class="container">
+          <a href="#top" class="brand js-target-scroll">
+            <span>Rcubes Design</span>
+          </a>
+          <ul class="nav navbar-desctop-menu">
+            <li class="active">
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./index.html#about">About</a>
+            </li>
+            <li>
+              <a href="./portfolio.html">Projects</a>
+            </li>
+            <li>
+              <a href="./index.html#services">Services</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contacts</a>
+            </li>
           </ul>
         </div>
+      </nav>
 
-        <!-- Navigation Desctop -->
+      <!-- Navigation Mobile -->
 
-        <nav class="navbar-desctop visible-md visible-lg">
-          <div class="container">
-            <a href="#top" class="brand js-target-scroll">
-              <span class="text-primary"></span>Rcubes design
-            </a>
-            <ul class="nav navbar-desctop-menu">
-              <li class="active">
-                <a href="./index.html">Home</a>
-              </li>
-              <li>
-                <a href="./index.html#about">About</a>
-              </li>
-              <li>
-                <a href="./portfolio.html">Projects</a>
-              </li>
-              <li>
-                <a href="./index.html#services">Services</a>
-              </li>
-              <li>
-                <a href="./contact.html">Contacts</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+      <nav class="nav navbar-mobile">
+        <a href="#top" class="brand js-target-scroll">
+          <span >Rcubes design</span>
+        </a>
 
-        <!-- Navigation Mobile -->
+        <!-- Navbar Collapse -->
 
-        <nav class="nav navbar-mobile">
-          <a href="#top" class="brand js-target-scroll">
-            <span class="text-primary"></span>Rcubes design
-          </a>
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#navbar-mobile"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-          <!-- Navbar Collapse -->
+        <div class="collapse navbar-collapse" id="navbar-mobile">
+          <ul class="navbar-nav-mobile">
+            <li class="active">
+              <a href="#top">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#clients">Clients</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="sub-banner">
+      <figure class="light-image mb-0">
+        <img
+          src="./assets/images/top-lightimage.png"
+          alt=""
+          class="img-fluid"
+        />
+      </figure>
 
-          <button
-            type="button"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar-mobile"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbar-mobile">
-            <ul class="navbar-nav-mobile">
-              <li class="active">
-                <a href="#top">Home</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#clients">Clients</a>
-              </li>
-              <li>
-                <a href="./contact.html">Contacts</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
       <section class="banner-section" style="padding-top: 250px; height: 100vh">
         <div class="container-fluid">
           <div class="row">
             <div
               class="col-lg-5 col-md-12 col-sm-12 col-12 order-lg-1 order-2 banner-column"
             >
-              <div class="banner_content" data-aos="fade-left"></div>
+              <div class="banner_content" data-aos="fade-left">
+                <div class="content">
+                  <h1>Our Portfolio</h1>
+                  <p>
+                    Guis aute irure dolor in rearehenderit in eouta velireu esse
+                    fugiat nulla pariatur.
+                  </p>
+                  <div class="box">
+                    <span class="mb-0">Home</span>
+                    <span class="mb-0 dash">-</span>
+                    <span class="mb-0 box_span">Portfolio</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-lg-7 col-md-12 col-sm-12 col-12 order-lg-2 order-1">
               <div class="banner_wrapper">
-                <div class="banner_content" data-aos="fade-left">
-                  <div class="content">
-                    <h1>Our Portfolio</h1>
-                    <p>
-                      We provide innovative design solutions for residential and
-                      commercial spaces, focusing on aesthetics, functionality,
-                      and sustainability.
-                    </p>
-                    <div class="box">
-                      <span class="mb-0">Home</span>
-                      <span class="mb-0 dash">-</span>
-                      <span class="mb-0 box_span">Portfolio</span>
-                    </div>
-                  </div>
-                </div>
+                <figure class="sub-bannerimage mb-0" data-aos="fade-up">
+                  <img
+                    src="./assets/images/portfolio-bannerimage.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </figure>
               </div>
             </div>
           </div>
@@ -681,7 +643,7 @@
       </div>
     </section>
     <!-- Footer -->
-    <section class="footer-section">
+    <section class="footer-section" style="overflow-x: hidden">
       <div class="container">
         <div class="middle-portion">
           <div class="row">
@@ -690,7 +652,7 @@
                 <a href="./index.html">
                   <figure class="footer-logo">
                     <img
-                      src="./assets/images/logo.png"
+                      src="./assets/images/Rcube_logo.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -735,7 +697,7 @@
                     <span class="text-size-16">Call us at:</span>
                     <a
                       class="text-size-16 mb-0 text-decoration-none"
-                      href="tel:+923465564074"
+                      href="tel:+568925896325"
                       >+92 346 5564074</a
                     >
                   </div>
@@ -770,6 +732,11 @@
                       class="text-size-16 mb-0 text-decoration-none"
                       >contact@rcubesdesign.com</a
                     >
+                    <a
+                      href="mailto:rcubesdesign@gmail.com"
+                      class="text-size-16 mb-0 text-decoration-none"
+                      >rcubesdesign@gmail.com</a
+                    >
                   </div>
                 </div>
               </div>
@@ -792,8 +759,8 @@
                 </form>
                 <ul class="list-unstyled mb-0">
                   <li class="text">
-                    <i class="circle fa-duotone fa-check"></i>Subscribe to our
-                    newsletter to receive the latest news and exclusive offers.
+                    Subscribe to our newsletter to receive the latest news and
+                    exclusive offers directly in your inbox.
                   </li>
                 </ul>
                 <div class="social-icons position-relative">
