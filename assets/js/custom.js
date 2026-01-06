@@ -1,42 +1,38 @@
-
 // TABS JS
 
 function makeTabActive() {
+  var url = window.location.href;
 
-    var url = window.location.href;
+  var indexof = url.indexOf("#");
 
-    var indexof = url.indexOf("#");
+  if (indexof > 0) {
+    var activeTab = url.substring(indexof + 1);
 
-    if (indexof > 0) {
+    if (
+      typeof activeTab != "undefined" &&
+      activeTab != "" &&
+      activeTab != "#"
+    ) {
+      // to dispaly give tab content
 
-        var activeTab = url.substring(indexof + 1);
+      jQuery(".tab-pane").removeClass("active in show");
 
-        if (typeof activeTab != 'undefined' && activeTab != '' && activeTab != '#') {
+      jQuery("#" + activeTab).addClass("active in show");
 
-            // to dispaly give tab content
+      // to make active given tab
 
-            jQuery(".tab-pane").removeClass("active in show");
+      jQuery(".nav-tabs li a").removeClass("active");
 
-            jQuery("#" + activeTab).addClass("active in show")
-
-            // to make active given tab
-
-            jQuery(".nav-tabs li a").removeClass("active");
-
-            jQuery(".nav-tabs li a[href='#" + activeTab + "']").addClass("active");
-        }
+      jQuery(".nav-tabs li a[href='#" + activeTab + "']").addClass("active");
     }
+  }
 }
 
 const element = document.querySelectorAll(".badge__char");
-const step = 360/element.length;
+const step = 360 / element.length;
 
 element.forEach((elem, i) => {
-  elem.style.setProperty('--char-rotate', (i * step) + 'deg');
-})
+  elem.style.setProperty("--char-rotate", i * step + "deg");
+});
 
-const foo = (360 / 7);
-
-for (i = 0; i <= 7; i++) {
-  console.log((i * foo) + 'deg');
-}
+console.log(i * foo + "deg");
