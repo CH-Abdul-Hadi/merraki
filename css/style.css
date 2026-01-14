@@ -603,7 +603,7 @@ label.error{
   z-index: 4;
   left: 0;
   top:0;
-  width: 39.47vmin;
+  width: 19.47vmin;
   height: 40.7vmin;
   padding: 4.8vmin 2em 4.8vmin;
   background-color: #2b2b2b;
@@ -620,6 +620,7 @@ label.error{
   font-size:4vmin;
   line-height: 1;
   color: #fff;
+  margin-left: -1rem;
 }
 
 .brand:hover,
@@ -655,8 +656,8 @@ label.error{
 .slide-number sup{
   display: inline-block;
   position: relative;
-  top:-3px;
-  font-size: 2vmin;
+  top:14px;
+  font-size: 5vmin;
   letter-spacing: 0.1em;
   color: #5e5e5e;
   vertical-align: top;
@@ -665,7 +666,7 @@ label.error{
 
 .slide-number sup .delimiter{
   display: inline-block;
-  margin-right: 0.4em;
+  margin-right: 1.5em;
 }
 
 .header-phone{
@@ -676,7 +677,7 @@ label.error{
   position: absolute;
   z-index: 3;
   color: #fff;
-  left: 45vmin;
+  left: 28vmin;
   top:5.9vmin;
 }
 
@@ -763,12 +764,12 @@ label.error{
 }
 
 .social-list .fa{
-  font-size: 2.4vmin;
-  color: #606060;
+  font-size: 3.4vmin;
+  color: #c5a47e;
 }
 
 .social-list .fa:hover{
-  color:#c5a47e;
+  color:#606060;
   text-decoration: none;
 }
 
@@ -795,7 +796,8 @@ label.error{
   top:0;
   left:0;
   width: 100%;
-  padding:5.9vmin 0 0;
+  padding:6vmin 0 0;
+  background-color: #2b2b2b;
 }
 
 .navbar-desctop .brand{
