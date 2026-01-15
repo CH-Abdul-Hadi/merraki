@@ -128,13 +128,14 @@
                 <a href="#top">Home</a>
               </li>
               <li>
+                <a href="#services">Services</a>
+              </li>
+
+              <li>
                 <a href="#about">About</a>
               </li>
               <li>
                 <a href="./portfolio.html">Projects</a>
-              </li>
-              <li>
-                <a href="#services">Services</a>
               </li>
               <li>
                 <a href="./contact.html">Contacts</a>
@@ -147,7 +148,7 @@
 
         <nav class="nav navbar-mobile">
           <a href="#top" class="brand js-target-scroll">
-            <span class="text-primary">Rcubes design</span>
+            <span >Rcubes design</span>
           </a>
 
           <!-- Navbar Collapse -->
@@ -170,14 +171,15 @@
                 <a href="./index.html">Home</a>
               </li>
               <li>
+                <a href="./index.html#services">Services</a>
+              </li>
+              <li>
                 <a href="./index.html#about">About</a>
               </li>
               <li>
                 <a href="./portfolio.html">Projects</a>
               </li>
-              <li>
-                <a href="./index.html#services">Services</a>
-              </li>
+
               <li>
                 <a href="./contact.html">Contacts</a>
               </li>
@@ -735,7 +737,19 @@
     </section>
 
     <!-- Successful work -->
-    <section class="work-section" style="overflow-x: hidden">
+    <section
+      class="work-section"
+      style="
+        overflow-x: hidden;
+        background: url(./assets/images/banner-background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 120px;
+        padding-bottom: 40px;
+        position: relative;
+      "
+    >
       <figure class="light-image mb-0">
         <img
           src="./assets/images/top-lightimage.png"
@@ -744,55 +758,238 @@
         />
       </figure>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-            <div class="work_content">
-              <div class="year">
-                <span class="value counter">8</span>
-                <sup class="mb-0 plus">+</sup>
-              </div>
-              <h2>Years of Successful Work in Market</h2>
-              <div class="discover-button">
-                <a
-                  class="discover_more text-decoration-none"
-                  href="./portfolio.html"
-                  >Discover More</a
-                >
-                <a
-                  class="image-button text-decoration-none"
-                  href="./portfolio.html"
-                >
-                  <figure class="arrow mb-0">
-                    <img
-                      src="./assets/images/arrow.png"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </figure>
-                </a>
-              </div>
+        <div class="row" style="position: relative">
+          <!-- Left Section: Title and Description -->
+          <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+            <div style="position: relative; z-index: 2">
+              <!-- Animated Title -->
+              <h2
+                style="
+                  font-size: 46px;
+                  line-height: 58px;
+                  font-weight: 600;
+                  color: #ffffff;
+                  margin-bottom: 40px;
+                  animation: slideInLeft 1s ease-out;
+                "
+              >
+                SOME INTERESTING<br />FACTS
+              </h2>
+              <div
+                style="
+                  width: 80px;
+                  height: 3px;
+                  background: #e1b261;
+                  margin-bottom: 40px;
+                  animation: expandWidth 1.5s ease-out;
+                "
+              ></div>
+
+              <!-- Animated Description
+              <p
+                style="
+                  font-size: 16px;
+                  line-height: 28px;
+                  color: #a7a7a7;
+                  margin-bottom: 0;
+                  animation: fadeInUp 1.2s ease-out 0.3s both;
+                "
+              >
+                We are an architecture firm specializing in the design of
+                modern, sustainable and environmentally conscious structures. We
+                strive to create unique designs that are tailored to meet the
+                specific needs of our clients. Our team of architects and
+                designers are highly experienced and take great pride in their
+                work, bringing their expertise to each project. Whether you are
+                designing a new home, office or commercial building, we will
+                work with you to craft a bespoke design that meets your exact
+                requirements.
+              </p> -->
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-            <div class="work_wrapper">
-              <figure class="work-image mb-0" data-aos="fade-right">
-                <img
-                  src="./assets/images/hero3.jpeg"
-                  alt=""
-                  class="img-fluid"
-                />
-              </figure>
-              <figure class="work-imagebackground mb-0" data-aos="fade-up">
-                <img
-                  src="./assets/images/work-imagebackground.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
-              </figure>
+
+          <!-- Large Background Number -->
+          <div
+            style="
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              z-index: 0;
+              text-align: center;
+              pointer-events: none;
+            "
+          >
+            <span
+              style="
+                font-size: 400px;
+                line-height: 1;
+                font-weight: 700;
+                color: rgba(255, 255, 255, 0.03);
+                animation: fadeIn 2s ease-out;
+              "
+            ></span>
+          </div>
+
+          <!-- Right Section: Statistics -->
+          <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+            <!-- Animated Description -->
+            <p
+              style="
+                font-size: 16px;
+                line-height: 28px;
+                color: #a7a7a7;
+                margin-bottom: 0;
+                animation: fadeInUp 1.2s ease-out 0.3s both;
+              "
+            >
+              We are an architecture firm specializing in the design of modern,
+              sustainable and environmentally conscious structures. We strive to
+              create unique designs that are tailored to meet the specific needs
+              of our clients. Our team of architects and designers are highly
+              experienced and take great pride in their work, bringing their
+              expertise to each project. Whether you are designing a new home,
+              office or commercial building, we will work with you to craft a
+              bespoke design that meets your exact requirements.
+            </p>
+            <div class="row" style="position: relative; z-index: 2">
+              <!-- Stat 1: Finished Projects -->
+              <div
+                class="col-lg-4 col-md-4 col-sm-4 col-12 text-center"
+                style="margin-bottom: 40px"
+              >
+                <div style="animation: fadeInUp 1s ease-out 0.4s both">
+                  <h2
+                    style="
+                      font-size: 80px;
+                      line-height: 1;
+                      font-weight: 700;
+                      color: #ffffff;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    <span class="counter">100</span>
+                  </h2>
+                  <p
+                    style="
+                      font-size: 18px;
+                      color: #e1b261;
+                      margin: 0;
+                      font-weight: 500;
+                    "
+                  >
+                    Finished projects
+                  </p>
+                </div>
+              </div>
+
+              <!-- Stat 2: Happy Customers -->
+              <div
+                class="col-lg-4 col-md-4 col-sm-4 col-12 text-center"
+                style="margin-bottom: 40px"
+              >
+                <div style="animation: fadeInUp 1s ease-out 0.6s both">
+                  <h2
+                    style="
+                      font-size: 80px;
+                      line-height: 1;
+                      font-weight: 700;
+                      color: #ffffff;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    <span class="counter">70</span>
+                  </h2>
+                  <p
+                    style="
+                      font-size: 18px;
+                      color: #e1b261;
+                      margin: 0;
+                      font-weight: 500;
+                    "
+                  >
+                    Happy customers
+                  </p>
+                </div>
+              </div>
+
+              <!-- Stat 3: Year Experience -->
+              <div
+                class="col-lg-4 col-md-4 col-sm-4 col-12 text-center"
+                style="margin-bottom: 40px"
+              >
+                <div style="animation: fadeInUp 1s ease-out 0.8s both">
+                  <h2
+                    style="
+                      font-size: 80px;
+                      line-height: 1;
+                      font-weight: 700;
+                      color: #ffffff;
+                      margin-bottom: 20px;
+                    "
+                  >
+                    <span class="counter">8</span>
+                  </h2>
+                  <p
+                    style="
+                      font-size: 18px;
+                      color: #e1b261;
+                      margin: 0;
+                      font-weight: 500;
+                    "
+                  >
+                    Year Experience
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Inline CSS Animations -->
+      <style>
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes expandWidth {
+          from {
+            width: 0;
+          }
+          to {
+            width: 80px;
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      </style>
     </section>
     <!-- Recent work -->
 
@@ -905,13 +1102,13 @@
               <div class="team-box">
                 <figure>
                   <img
-                    src="./assets/images/team-image1.jpg"
+                    src="./assets/campanyData/team/SYED_RAZA_JAN(CEO).png"
                     class="img-fluid"
                     alt=""
                   />
                 </figure>
-                <h5>John Doe</h5>
-                <span>Senior Architect</span>
+                <h5>Syed Raza Jan</h5>
+                <span>CEO</span>
               </div>
             </div>
             <!-- Member 2 -->
@@ -919,13 +1116,13 @@
               <div class="team-box">
                 <figure>
                   <img
-                    src="./assets/images/team-image2.jpg"
+                    src="./assets/campanyData/team/MUHAMMAD_SALEH_HAIDER(principal_architect).png"
                     class="img-fluid"
                     alt=""
                   />
                 </figure>
-                <h5>Jane Smith</h5>
-                <span>Interior Designer</span>
+                <h5>Muhammad Saleh Haider</h5>
+                <span>Principal Architect</span>
               </div>
             </div>
             <!-- Member 3 -->
@@ -933,13 +1130,55 @@
               <div class="team-box">
                 <figure>
                   <img
-                    src="./assets/images/team-image3.jpg"
+                    src="./assets/campanyData/team/Syed_Waqar_Haleem(Site_Architect).png"
                     class="img-fluid"
                     alt=""
                   />
                 </figure>
-                <h5>Mike Brown</h5>
-                <span>Project Manager</span>
+                <h5>Syed_Waqar Haleem</h5>
+                <span>Site Architect</span>
+              </div>
+            </div>
+            <!-- Member 4 -->
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="team-box">
+                <figure>
+                  <img
+                    src="./assets/campanyData/team/Samina_Bibi(Interior_design).png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </figure>
+                <h5>Samina Bibi</h5>
+                <span>Interior Designer</span>
+              </div>
+            </div>
+            <!-- Member 5 -->
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="team-box">
+                <figure>
+                  <img
+                    src="./assets/campanyData/team/Muhammad_Azhar(Senior_Draftsman).png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </figure>
+                <h5>Muhammad Azhar</h5>
+                <span>Senior Draftsman</span>
+              </div>
+            </div>
+            <!-- Member 6 -->
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="team-box">
+                <figure>
+                  <img
+                    src="./assets/campanyData/team/Muhammad_Naeem_(3d_Visualization_Lead).png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </figure>
+                <h5>Muhammad Naeem</h5>
+                <span>3D Visualization Lead</span>
               </div>
             </div>
           </div>
