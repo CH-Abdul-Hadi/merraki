@@ -693,6 +693,12 @@ label.error{
   }
  }
 
+ @media (max-width: 480px) {
+  .brand{
+    margin-left: -2rem;
+  }
+ }
+
 
 
 /* 2.2 Vertical Panel */
