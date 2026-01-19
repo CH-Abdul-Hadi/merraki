@@ -773,8 +773,8 @@
                   font-weight: 600;
                   color: #ffffff;
                   margin-bottom: 40px;
-                  animation: slideInLeft 1s ease-out;
                 "
+                class="anim-title"
               >
                 SOME INTERESTING<br />FACTS
               </h2>
@@ -784,30 +784,9 @@
                   height: 3px;
                   background: #e1b261;
                   margin-bottom: 40px;
-                  animation: expandWidth 1.5s ease-out;
                 "
+                class="anim-divider"
               ></div>
-
-              <!-- Animated Description
-              <p
-                style="
-                  font-size: 16px;
-                  line-height: 28px;
-                  color: #a7a7a7;
-                  margin-bottom: 0;
-                  animation: fadeInUp 1.2s ease-out 0.3s both;
-                "
-              >
-                We are an architecture firm specializing in the design of
-                modern, sustainable and environmentally conscious structures. We
-                strive to create unique designs that are tailored to meet the
-                specific needs of our clients. Our team of architects and
-                designers are highly experienced and take great pride in their
-                work, bringing their expertise to each project. Whether you are
-                designing a new home, office or commercial building, we will
-                work with you to craft a bespoke design that meets your exact
-                requirements.
-              </p> -->
             </div>
           </div>
 
@@ -830,8 +809,8 @@
                 line-height: 1;
                 font-weight: 700;
                 color: rgba(255, 255, 255, 0.03);
-                animation: fadeIn 2s ease-out;
               "
+              class="anim-bg-num"
             ></span>
           </div>
 
@@ -844,8 +823,8 @@
                 line-height: 28px;
                 color: #a7a7a7;
                 margin-bottom: 0;
-                animation: fadeInUp 1.2s ease-out 0.3s both;
               "
+              class="anim-desc"
             >
               We are an architecture firm specializing in the design of modern,
               sustainable and environmentally conscious structures. We strive to
@@ -862,7 +841,7 @@
                 class="col-lg-4 col-md-4 col-sm-4 col-12 text-center"
                 style="margin-bottom: 40px"
               >
-                <div style="animation: fadeInUp 1s ease-out 0.4s both">
+                <div class="anim-stat-1">
                   <h2
                     style="
                       font-size: 80px;
@@ -892,7 +871,7 @@
                 class="col-lg-4 col-md-4 col-sm-4 col-12 text-center"
                 style="margin-bottom: 40px"
               >
-                <div style="animation: fadeInUp 1s ease-out 0.6s both">
+                <div class="anim-stat-2">
                   <h2
                     style="
                       font-size: 80px;
@@ -922,7 +901,7 @@
                 class="col-lg-4 col-md-4 col-sm-4 col-12 text-center"
                 style="margin-bottom: 40px"
               >
-                <div style="animation: fadeInUp 1s ease-out 0.8s both">
+                <div class="anim-stat-3">
                   <h2
                     style="
                       font-size: 80px;
@@ -992,7 +971,61 @@
             opacity: 1;
           }
         }
+
+        /* Initial states for animations (hidden) */
+        .anim-title,
+        .anim-divider,
+        .anim-bg-num,
+        .anim-desc,
+        .anim-stat-1,
+        .anim-stat-2,
+        .anim-stat-3 {
+          opacity: 0;
+        }
+
+        /* Trigger animations when in-view */
+        .work-section.in-view .anim-title {
+          animation: slideInLeft 1s ease-out forwards;
+        }
+        .work-section.in-view .anim-divider {
+          animation: expandWidth 1.5s ease-out forwards;
+        }
+        .work-section.in-view .anim-bg-num {
+          animation: fadeIn 2s ease-out forwards;
+        }
+        .work-section.in-view .anim-desc {
+          animation: fadeInUp 1.2s ease-out 0.3s forwards;
+        }
+        .work-section.in-view .anim-stat-1 {
+          animation: fadeInUp 1s ease-out 0.4s forwards;
+        }
+        .work-section.in-view .anim-stat-2 {
+          animation: fadeInUp 1s ease-out 0.6s forwards;
+        }
+        .work-section.in-view .anim-stat-3 {
+          animation: fadeInUp 1s ease-out 0.8s forwards;
+        }
       </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("in-view");
+                  observer.unobserve(entry.target); // Run once
+                }
+              });
+            },
+            { threshold: 0.2 }
+          );
+
+          const workSection = document.querySelector(".work-section");
+          if (workSection) {
+            observer.observe(workSection);
+          }
+        });
+      </script>
     </section>
     <!-- Recent work -->
 
@@ -1161,7 +1194,7 @@
               <div class="team-box">
                 <figure>
                   <img
-                    src="./assets/campanyData/team/Muhammad_Azhar(Senior_Draftsman).png"
+                    src="./assets/campanyData/team/Muhammad_Azhar(Senior_draftsman).png"
                     class="img-fluid"
                     alt=""
                   />
