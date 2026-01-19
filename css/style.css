@@ -675,6 +675,7 @@ label.error{
   font-size: 0.81em;
   letter-spacing: 0.32em;
   position: absolute;
+  padding-top: 1.4rem;
   z-index: 3;
   color: #fff;
   left: 28vmin;
@@ -802,7 +803,7 @@ label.error{
   top:0;
   left:0;
   width: 100%;
-  padding:6vmin 0 0;
+  padding:9vmin 0 0;
   background-color: #2b2b2b;
 }
 
