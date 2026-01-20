@@ -26,6 +26,7 @@ Project:  Merraki
 
 :root {
     --e-global-color-primary: #ffffff;
+    /* --e-global-color-primary: #858585; */
     --e-global-color-secondary: #e1b261;
     --e-global-color-text: #a7a7a7;
     --e-global-color-accent: #e1b261;

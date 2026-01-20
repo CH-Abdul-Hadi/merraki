@@ -134,45 +134,54 @@ body{
 }
 
 h1,
-/* .h1{ 
-  font-family: 'Oswald', sans-serif;
+.h1{ 
+  /* font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 8vmin;
   line-height: 1.2;
   letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: #fff;
-} */
+  text-transform: uppercase; */
+  color: #b7b7b7;
+}
 
 h2,
-/* .h2{ 
-  font-family: 'Oswald', sans-serif;
+.h2{ 
+  /* font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 2.1875em;
   letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: #fff;
-} */
+  text-transform: uppercase; */
+  color: #b7b7b7;
+}
 
 h3,
-/* .h3{
-  font-family: 'montserratsemibold';
+.h3{
+  /* font-family: 'montserratsemibold';
   font-size: 1.875em;
   line-height: 1.1;
-  font-weight: normal;
-  color:#fff;
-} */
+  font-weight: normal; */
+  color:#b7b7b7; 
+}
 
 h4,
-/* .h4{
-  font-family: 'montserratsemibold';
+.h4{
+  /* font-family: 'montserratsemibold';
   font-size: 1.125em;
   line-height: 1.35;
-  font-weight: normal;
-  color:#fff;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-} */
+  font-weight: normal; */
+  color:#b7b7b7;
+  /* letter-spacing: 0.2em;
+  text-transform: uppercase; */
+}
+h6,.h6{
+  /* font-family: 'montserratsemibold';
+  font-size: 1.125em;
+  line-height: 1.35;
+  font-weight: normal; */
+  color:#b7b7b7;
+  /* letter-spacing: 0.2em;
+  text-transform: uppercase; */
+}
 
 h1 a,
 .h1 a,
