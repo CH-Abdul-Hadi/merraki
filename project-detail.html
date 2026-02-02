@@ -1,8 +1,7 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="en">
   <head>
-    <title>Portfolio | Rcubes Design</title>
-    <!-- /SEO Ultimate -->
+    <title>Project Details | Rcubes Design</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
@@ -13,33 +12,23 @@
       href="./assets/images/Rcube_logo.webp"
       type="image/x-icon"
     />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.webp" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- Latest compiled and minified CSS -->
+
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/js/bootstrap.min.js" />
-    <!-- Font Awesome link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <!-- StyleSheet link CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/custom-style.css" rel="stylesheet" type="text/css" />
     <link
-      href="assets/css/special-classes.css"
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Montserrat:400,700"
       rel="stylesheet"
-      type="text/css"
-    />
-    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom-style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <!-- slider animations css-->
     <link
       href="https://fonts.googleapis.com/css?family=Oswald:300,400,700"
       rel="stylesheet"
@@ -49,56 +38,90 @@
       rel="stylesheet"
     />
     <link href="css/style.css" rel="stylesheet" media="screen" />
+    <!-- slider animations css-->
 
-    <!-- Project Detail Styles -->
     <style>
+      /* Fix for Fixed Header overlap */
+      body {
+        padding-top: 90px;
+      }
+
       .project-detail-section {
         padding: 80px 0;
-        background: #f8f8f8;
       }
 
       .project-title {
-        font-size: 48px;
+        font-family: "Oswald", sans-serif;
+        font-size: 42px;
         font-weight: 700;
-        color: #333;
         margin-bottom: 40px;
-        text-transform: capitalize;
-        letter-spacing: -0.5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        display: inline-block;
       }
 
-      #image-gallery {
-        display: grid;
-        gap: 20px;
+      .project-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 60px;
+        height: 4px;
+        background: #e1b261;
       }
 
-      #image-gallery img {
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      .gallery-wrapper {
+        margin-top: 20px;
       }
 
-      #image-gallery img:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      .img-container {
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        background: #f9f9f9;
+      }
+
+      .img-container img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .img-container:hover img {
+        transform: scale(1.02);
       }
 
       @media (max-width: 768px) {
-        .project-title {
-          font-size: 32px;
-          margin-bottom: 30px;
+        .img-container img {
+          height: 250px;
         }
+      }
 
-        .project-detail-section {
-          padding: 60px 0;
+      /* Banner tweaks */
+      .sub-banner {
+        position: relative;
+
+        overflow: hidden;
+      }
+      .banner-section-2 {
+        padding-top: 250px !important;
+        height: 100vh;
+      }
+      @media (max-width: 480px) {
+        .banner-section-2 {
+          padding-top: 65px !important;
+          height: 100vh;
         }
       }
     </style>
-
-    <!-- slider animations css-->
   </head>
 
   <body>
-    <!-- Header  -->
+    <!-- header -->
     <header
       id="top"
       class="header-home"
@@ -108,7 +131,7 @@
         left: 0;
         width: 100%;
         z-index: 9999;
-        background-color: rgba(50, 50, 50, 0.95) !important;
+        background-color: #2b2b2b !important;
         padding-bottom: 20px;
         height: 90px;
       "
@@ -211,7 +234,7 @@
         />
       </figure>
 
-      <section class="banner-section" style="padding-top: 250px; height: 100vh">
+      <section class="banner-section banner-section-2">
         <div class="container-fluid">
           <div class="row">
             <div
@@ -219,15 +242,15 @@
             >
               <div class="banner_content" data-aos="fade-left">
                 <div class="content">
-                  <h1>Our Portfolio</h1>
+                  <h1 id="project-title-banner">Project Details</h1>
                   <p>
-                    Guis aute irure dolor in rearehenderit in eouta velireu esse
-                    fugiat nulla pariatur.
+                    Experience the perfect blend of aesthetics and utility,
+                    tailored to your unique lifestyle.
                   </p>
                   <div class="box">
                     <span class="mb-0">Home</span>
                     <span class="mb-0 dash">-</span>
-                    <span class="mb-0 box_span">Portfolio</span>
+                    <span class="mb-0 box_span">Project Details</span>
                   </div>
                 </div>
               </div>
@@ -239,6 +262,7 @@
                     src="./assets/images/portfolio-bannerimage.webp"
                     alt=""
                     class="img-fluid"
+                    id="banner-image"
                   />
                 </figure>
               </div>
@@ -248,137 +272,40 @@
       </section>
     </div>
 
-    <!-- Project Detail Section -->
-    <section class="project-detail-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12">
-            <h1 id="project-title" class="project-title">Loading...</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div id="image-gallery" class="col-12"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio -->
+    <!-- main section -->
+    <section
+      class="project-detail-section"
+      style="
+        position: relative;
+        overflow: hidden;
+        background-image: url(./assets/images/banner-background_2.png);
+        background-size: cover;
+        background-position: center;
+      "
+    >
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <div class="subheading" data-aos="fade-right">
-              <h6>What’s New</h6>
-              <h2>Recent Work We Have Done</h2>
-            </div>
+          <div class="col-12 text-center">
+            <h1 id="project-title" class="project-title">Loading Project...</h1>
           </div>
         </div>
-        <div class="tabs-box tabs-options">
-          <ul class="nav nav-tabs">
-            <li><a class="active" data-toggle="tab" href="#all">All</a></li>
-            <li><a data-toggle="tab" href="#architecture">Architecture</a></li>
-            <li><a data-toggle="tab" href="#interior">Interior</a></li>
-            <li>
-              <a data-toggle="tab" href="#visualization">Visualization</a>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <div id="all" class="tab-pane active" data-category="all">
-              <div class="row position-relative" data-aos="fade-up"></div>
-            </div>
-            <div
-              id="architecture"
-              class="tab-pane"
-              data-category="architecture"
-            >
-              <div class="row position-relative"></div>
-            </div>
-            <div id="interior" class="tab-pane" data-category="interior">
-              <div class="row position-relative"></div>
-            </div>
-            <div
-              id="visualization"
-              class="tab-pane"
-              data-category="visualization"
-            >
-              <div class="row position-relative"></div>
-            </div>
-          </div>
-        </div>
-        <div class="pagination-container text-center mt-5">
-          <div
-            id="portfolio-pagination"
-            class="d-flex justify-content-center align-items-center gap-3"
-          ></div>
-      </div>
-      </div>
-    </section> -->
 
-    <!-- OUR Clients -->
-    <section class="testimonial-section" style="overflow-x: hidden">
-      <div class="logo-marquee-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 text-center mb-4">
-              <h2>Our Clients</h2>
-            </div>
+        <div id="image-gallery" class="gallery-wrapper">
+          <div class="text-center p-5">
+            <div class="spinner-border text-danger" role="status"></div>
           </div>
         </div>
-        <div class="logo-marquee-track">
-          <!-- First set of logos -->
-          <!--  -->
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/0001.webp" alt="Partner 1" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/canopy.webp" alt="Partner 2" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/cecil.webp" alt="Partner 3" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/hl.webp" alt="Partner 4" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/0001.webp" alt="Partner 1" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/canopy.webp" alt="Partner 2" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/cecil.webp" alt="Partner 3" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/hl.webp" alt="Partner 4" />
-          </div>
-          <!-- Duplicate set for seamless looping (8 duplicates to match the calculation in CSS) -->
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/0001.webp" alt="Partner 1" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/canopy.webp" alt="Partner 2" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/cecil.webp" alt="Partner 3" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/hl.webp" alt="Partner 4" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/0001.webp" alt="Partner 1" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/canopy.webp" alt="Partner 2" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/cecil.webp" alt="Partner 3" />
-          </div>
-          <div class="logo-marquee-slide">
-            <img src="./assets/images/hl.webp" alt="Partner 4" />
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <a href="./portfolio.html" class="btn btn-dark px-5 py-3"
+              >BACK TO PORTFOLIO</a
+            >
           </div>
         </div>
       </div>
     </section>
-    <!-- Footer -->
+    <!-- footer -->
     <section class="footer-section" style="overflow-x: hidden">
       <div class="container">
         <div class="middle-portion">
@@ -583,69 +510,107 @@
         </div>
       </div>
     </section>
-    <!-- Latest compiled JavaScript -->
+
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/video_link.js"></script>
-    <script src="./assets/js/video.js"></script>
-    <script src="assets/js/counter.js"></script>
-    <script src="assets/js/owl.carousel.js"></script>
-    <script src="assets/js/custom-carousel.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/animation_links.js"></script>
-    <script src="assets/js/animation.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- SLIDER REVOLUTION -->
+    <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
+    <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS   -->
+    <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.video.min.js"></script>
+    <script src="js/interface.js"></script>
     <script>
-      // Load portfolio data from JSON
+      (function () {
+        // Restore main/global jQuery after rev-slider and interface scripts have loaded
+        window.jQuery = window._prevJQ;
+        window.$ = window._prev$;
+        try {
+          delete window._prevJQ;
+          delete window._prev$;
+        } catch (e) {}
+      })();
+    </script>
+
+    <script>
       async function loadProjectDetails() {
         try {
           const params = new URLSearchParams(window.location.search);
           const category = params.get("category");
           const id = parseInt(params.get("id"));
 
-          if (!category || id === null) {
-            document.getElementById("project-title").innerText = "Project not found";
+          if (!category || isNaN(id)) {
+            window.location.href = "portfolio.html";
             return;
           }
 
           const response = await fetch("./portfolio.json");
           const data = await response.json();
 
-          const categoryProjects = data.portfolio[category.toLowerCase()];
-          if (!categoryProjects || !categoryProjects[id]) {
-            document.getElementById("project-title").innerText = "Project not found";
+          // Find the specific category (architecture, interior, etc)
+          const categoryKey = category.toLowerCase();
+          const project = data.portfolio[categoryKey]
+            ? data.portfolio[categoryKey][id]
+            : null;
+
+          if (!project) {
+            document.getElementById("project-title").innerText =
+              "Project Not Found";
             return;
           }
 
-          const project = categoryProjects[id];
+          // Update Titles
+          const projectTitle = project.title.replace(/_/g, " ");
+          document.getElementById("project-title").innerText = projectTitle;
+          const bannerTitle = document.getElementById("project-title-banner");
+          if (bannerTitle) bannerTitle.innerText = projectTitle;
+          const bannerImage = document.getElementById("banner-image");
+          if (bannerImage) bannerImage.src = project.mainSrc;
 
-          // Display Title
-          document.getElementById("project-title").innerText =
-            project.title.replace(/_/g, " ");
-
-          // Display Images in Grid
           const gallery = document.getElementById("image-gallery");
-          let imagesHTML = `<div class="col-12 mb-4"><img src="${project.mainSrc}" class="img-fluid w-100" alt="${project.title}"></div>`;
 
-          // Display Other Images in 2-column layout
+          // Start HTML construction
+          // 1. Feature Image (Full Width)
+          let html = `
+                    <div class="row" data-aos="fade-up">
+                        <div class="col-12">
+                            <div class="img-container">
+                            </div>
+                        </div>
+                    </div>`;
+
+          // 2. Secondary Images (2-Column Grid)
           if (project.other && project.other.length > 0) {
-            imagesHTML += `<div class="row" style="margin-top: 20px;">`;
+            html += `<div class="row">`;
             project.other.forEach((imgSrc) => {
-              imagesHTML += `
-                <div class="col-md-6 mb-4">
-                    <img src="${imgSrc}" class="img-fluid w-100" alt="${project.title}" loading="lazy">
-                </div>`;
+              html += `
+                            <div class="col-md-6" data-aos="fade-up">
+                                <div class="img-container">
+                                    <img src="${imgSrc}" alt="${project.title}" loading="lazy">
+                                </div>
+                            </div>`;
             });
-            imagesHTML += `</div>`;
+            html += `</div>`;
           }
 
-          gallery.innerHTML = imagesHTML;
+          gallery.innerHTML = html;
+          AOS.init({ duration: 1000, once: true });
         } catch (error) {
-          console.error("Error loading project details:", error);
-          document.getElementById("project-title").innerText = "Error loading project";
+          console.error("Error loading project:", error);
+          document.getElementById("project-title").innerText =
+            "Error Loading Content";
         }
       }
 
-      // Load on page load
       document.addEventListener("DOMContentLoaded", loadProjectDetails);
     </script>
   </body>
