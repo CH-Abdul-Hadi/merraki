@@ -416,7 +416,7 @@ a.item-link {
   top: 12px;
   font-size: 20px;
   padding-top: 2px;
-  background: url("../images/icon-folder.png");
+  background: url("../images/icon-folder.webp");
   width: 16px;
   height: 14px;
   transition: all 0.3s ease;
@@ -429,7 +429,7 @@ a.item-link {
 /* Blog Page */
 
 .blogpage-section {
-  background: url(../images/service-background.jpg);
+  background: url(../images/service-background.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

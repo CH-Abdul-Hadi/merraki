@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zxx">
   <head>
     <title>Portfolio | Rcubes Design</title>
@@ -10,11 +10,11 @@
     <meta charset="utf-8" />
     <link
       rel="shortcut icon"
-      href="./assets/images/Rcube_logo.png"
+      href="./assets/images/Rcube_logo.webp"
       type="image/x-icon"
     />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.webp" />
     <meta name="theme-color" content="#ffffff" />
     <!-- Latest compiled and minified CSS -->
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
@@ -40,6 +40,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Performance Optimizations: Resource Hints -->
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="//unpkg.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css?family=Oswald:300,400,700"
       rel="stylesheet"
@@ -50,6 +55,287 @@
     />
     <link href="css/style.css" rel="stylesheet" media="screen" />
     <!-- slider animations css-->
+    <style>
+      /* ===== PERFORMANCE OPTIMIZATIONS ===== */
+
+      /* Skeleton Loader - Optimized */
+      .tab-image {
+        background: linear-gradient(
+          90deg,
+          #8f6767 25%,
+          #945656 50%,
+          #8f5656 75%
+        );
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+        /* GPU acceleration */
+        transform: translateZ(0);
+        will-change: background-position;
+      }
+
+      @keyframes loading {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      /* Progressive Image Loading */
+      .portfolio-card-img {
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+      }
+
+      .portfolio-card-img.loaded {
+        opacity: 1;
+      }
+
+      .portfolio-card-img.error {
+        opacity: 0.5;
+        filter: grayscale(100%);
+      }
+
+      /* Blur-up effect for images */
+      .tab-image.loading {
+        filter: blur(20px);
+        transform: scale(1.1);
+        transition:
+          filter 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .tab-image.loaded {
+        filter: blur(0);
+        transform: scale(1);
+      }
+
+      /* Circle Loader */
+      .skeleton-loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      .tab-image.loaded .skeleton-loader {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .circle-loader {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        border-top: 4px solid #ffffff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* ===== MODERN PORTFOLIO CARD STYLES ===== */
+      .portfolio-card-wrapper {
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: #fff;
+        /* CSS Containment for better rendering performance */
+        contain: layout style paint;
+        /* Reduce repaints for offscreen cards */
+        content-visibility: auto;
+      }
+
+      .portfolio-card-wrapper:hover {
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+        transform: translateY(-8px);
+      }
+
+      .portfolio-card-wrapper a {
+        text-decoration: none;
+        display: block;
+      }
+
+      .portfolio-card-wrapper figure {
+        margin: 0;
+        position: relative;
+      }
+
+      .portfolio-card-img {
+        transition:
+          transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.6s ease-in-out;
+        display: block;
+        /* Prepare for transform animations */
+        will-change: transform;
+      }
+
+      .portfolio-card-wrapper:hover .portfolio-card-img {
+        transform: scale(1.08);
+      }
+
+      /* Remove will-change after hover to save memory */
+      .portfolio-card-wrapper:not(:hover) .portfolio-card-img {
+        will-change: auto;
+      }
+
+      /* Overlay Gradient */
+      .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .portfolio-card-wrapper:hover .portfolio-overlay {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.7) 100%
+        );
+      }
+
+      /* Content Container */
+      .portfolio-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 28px 20px;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9),
+          rgba(0, 0, 0, 0.3)
+        );
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .portfolio-card-wrapper:hover .portfolio-content {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* Category Badge */
+      .portfolio-category-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 6px 12px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #fff;
+        animation: fadeInUp 0.5s ease-out 0.1s backwards;
+      }
+
+      .category-icon {
+        font-size: 14px;
+      }
+
+      .category-text {
+        display: inline-block;
+      }
+
+      /* Title */
+      .portfolio-title {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin: 0 0 12px 0;
+        letter-spacing: -0.3px;
+        animation: fadeInUp 0.5s ease-out 0.2s backwards;
+      }
+
+      /* View Button */
+      .portfolio-view-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        animation: fadeInUp 0.5s ease-out 0.3s backwards;
+      }
+
+      .arrow-icon {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .portfolio-card-wrapper:hover .arrow-icon {
+        transform: translateX(4px);
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .portfolio-content {
+          transform: translateY(0);
+          opacity: 1;
+          padding: 20px 16px;
+        }
+
+        .portfolio-overlay {
+          background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.7) 100%
+          );
+        }
+
+        .portfolio-title {
+          font-size: 16px;
+        }
+
+        .portfolio-category-badge {
+          font-size: 11px;
+          padding: 5px 10px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -160,7 +446,7 @@
     <div class="sub-banner">
       <figure class="light-image mb-0">
         <img
-          src="./assets/images/top-lightimage.png"
+          src="./assets/images/top-lightimage.webp"
           alt=""
           class="img-fluid"
         />
@@ -191,7 +477,7 @@
               <div class="banner_wrapper">
                 <figure class="sub-bannerimage mb-0" data-aos="fade-up">
                   <img
-                    src="./assets/images/portfolio-bannerimage.jpg"
+                    src="./assets/images/portfolio-bannerimage.webp"
                     alt=""
                     class="img-fluid"
                   />
@@ -223,342 +509,39 @@
             </li>
           </ul>
           <div class="tab-content">
-            <div id="all" class="tab-pane active">
-              <div class="row position-relative" data-aos="fade-up">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image1.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image2.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image3.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
-                  <div class="image">
-                    <figure class="tab-image tab-lgimage mb-0">
-                      <img
-                        src="./assets/images/tab-image4.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image5.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="tab-pane active">
+              <div class="row" id="dynamic-row"></div>
             </div>
-            <div id="architecture" class="tab-pane">
-              <div class="row position-relative">
-                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
-                  <div class="image">
-                    <figure class="tab-image tab-lgimage mb-0">
-                      <img
-                        src="./assets/images/tab-image4.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Architecture – Modern Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image5.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div id="portfolio-pagination" class="text-center mt-5"></div>
+
+            <div
+              id="architecture"
+              class="tab-pane"
+              data-category="architecture"
+            >
+              <div class="row position-relative"></div>
             </div>
-            <div id="interior" class="tab-pane">
-              <div class="row position-relative">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image1.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image2.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image3.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div id="interior" class="tab-pane" data-category="interior">
+              <div class="row position-relative"></div>
             </div>
-            <div id="visualization" class="tab-pane">
-              <div class="row position-relative">
-                <div class="col-lg-8 col-md-8 col-sm-8 col-12">
-                  <div class="image">
-                    <figure class="tab-image tab-lgimage mb-0">
-                      <img
-                        src="./assets/images/tab-image4.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image5.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image1.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image2.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-                  <div class="image">
-                    <figure class="tab-image mb-0">
-                      <img
-                        src="./assets/images/tab-image3.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </figure>
-                    <div class="box-content">
-                      <div class="content">
-                        <span class="text-white text-size-16"
-                          >Interior – Luxury Living</span
-                        >
-                        <h4 class="text-white">Kawa - Glamorous Penthouse</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div
+              id="visualization"
+              class="tab-pane"
+              data-category="visualization"
+            >
+              <div class="row position-relative"></div>
             </div>
           </div>
+        </div>
+        <div class="pagination-container text-center mt-5">
+          <div
+            id="portfolio-pagination"
+            class="d-flex justify-content-center align-items-center gap-3"
+          ></div>
         </div>
       </div>
     </section>
 
-    <!-- Journey -->
-    <!-- <section class="journey-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="journey_content" data-aos="fade-right">
-              <h6>Work With Us</h6>
-              <h2>Start Your Customer Journey With Us.</h2>
-            </div>
-            <div class="journey-button">
-              <a class="get_started text-decoration-none" href="./contact.html"
-                >Get Started</a
-              >
-              <a
-                class="image-button text-decoration-none"
-                href="./contact.html"
-              >
-                <figure class="arrow mb-0">
-                  <img
-                    src="./assets/images/arrow.png"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </figure>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
     <!-- OUR Clients -->
     <section class="testimonial-section" style="overflow-x: hidden">
       <div class="logo-marquee-section">
@@ -573,53 +556,53 @@
           <!-- First set of logos -->
           <!--  -->
           <div class="logo-marquee-slide">
-            <img src="./assets/images/0001.png" alt="Partner 1" />
+            <img src="./assets/images/0001.webp" alt="Partner 1" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/canopy.png" alt="Partner 2" />
+            <img src="./assets/images/canopy.webp" alt="Partner 2" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/cecil.png" alt="Partner 3" />
+            <img src="./assets/images/cecil.webp" alt="Partner 3" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/hl.png" alt="Partner 4" />
+            <img src="./assets/images/hl.webp" alt="Partner 4" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/0001.png" alt="Partner 1" />
+            <img src="./assets/images/0001.webp" alt="Partner 1" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/canopy.png" alt="Partner 2" />
+            <img src="./assets/images/canopy.webp" alt="Partner 2" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/cecil.png" alt="Partner 3" />
+            <img src="./assets/images/cecil.webp" alt="Partner 3" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/hl.png" alt="Partner 4" />
+            <img src="./assets/images/hl.webp" alt="Partner 4" />
           </div>
           <!-- Duplicate set for seamless looping (8 duplicates to match the calculation in CSS) -->
           <div class="logo-marquee-slide">
-            <img src="./assets/images/0001.png" alt="Partner 1" />
+            <img src="./assets/images/0001.webp" alt="Partner 1" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/canopy.png" alt="Partner 2" />
+            <img src="./assets/images/canopy.webp" alt="Partner 2" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/cecil.png" alt="Partner 3" />
+            <img src="./assets/images/cecil.webp" alt="Partner 3" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/hl.png" alt="Partner 4" />
+            <img src="./assets/images/hl.webp" alt="Partner 4" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/0001.png" alt="Partner 1" />
+            <img src="./assets/images/0001.webp" alt="Partner 1" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/canopy.png" alt="Partner 2" />
+            <img src="./assets/images/canopy.webp" alt="Partner 2" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/cecil.png" alt="Partner 3" />
+            <img src="./assets/images/cecil.webp" alt="Partner 3" />
           </div>
           <div class="logo-marquee-slide">
-            <img src="./assets/images/hl.png" alt="Partner 4" />
+            <img src="./assets/images/hl.webp" alt="Partner 4" />
           </div>
         </div>
       </div>
@@ -634,7 +617,7 @@
                 <a href="./index.html">
                   <figure class="footer-logo">
                     <img
-                      src="./assets/images/Rcube_logo.png"
+                      src="./assets/images/Rcube_logo.webp"
                       class="img-fluid"
                       alt=""
                     />
@@ -655,7 +638,7 @@
                   >
                     <figure class="arrow mb-0">
                       <img
-                        src="./assets/images/arrow.png"
+                        src="./assets/images/arrow.webp"
                         alt=""
                         class="img-fluid"
                       />
@@ -670,7 +653,7 @@
                 <div class="lower-content">
                   <figure class="icon">
                     <img
-                      src="./assets/images/footer-callicon.png"
+                      src="./assets/images/footer-callicon.webp"
                       alt=""
                       class="img-fluid"
                     />
@@ -687,22 +670,20 @@
                 <div class="lower-content">
                   <figure class="icon">
                     <img
-                      src="./assets/images/footer-locationicon.png"
+                      src="./assets/images/footer-locationicon.webp"
                       alt=""
                       class="img-fluid"
                     />
                   </figure>
                   <div class="content">
                     <span class="text-size-16">Our Location:</span>
-                    <p class="text text-size-16">
-                      121 Street Lahore, Pakistan
-                    </p>
+                    <p class="text text-size-16">121 Street Lahore, Pakistan</p>
                   </div>
                 </div>
                 <div class="lower-content">
                   <figure class="icon icon3">
                     <img
-                      src="./assets/images/footer-emailicon.png"
+                      src="./assets/images/footer-emailicon.webp"
                       alt=""
                       class="img-fluid"
                     />
@@ -753,7 +734,7 @@
                         target="_blank"
                       >
                         <img
-                          src="./assets/images/icons8-fiverr-48.png"
+                          src="./assets/images/icons8-fiverr-48.webp"
                           style="
                             width: 3rem;
                             position: relative;
@@ -768,28 +749,40 @@
                       <a
                         href="https://www.facebook.com/profile.php?id=100075647156373"
                         class="text-decoration-none"
-                        ><i class="fa-brands fa-facebook social-networks" style="font-size: 32px;"></i
-                       ></a>
+                        ><i
+                          class="fa-brands fa-facebook social-networks"
+                          style="font-size: 32px"
+                        ></i
+                      ></a>
                     </li>
                     <li>
                       <a
                         href="https://www.behance.net/arrazajan6a02"
                         class="text-decoration-none"
-                        ><i class="fa-brands fa-behance social-networks" style="font-size: 32px;"></i
+                        ><i
+                          class="fa-brands fa-behance social-networks"
+                          style="font-size: 32px"
+                        ></i
                       ></a>
                     </li>
                     <li>
                       <a
                         href="https://www.instagram.com/rcubesdesign/"
                         class="text-decoration-none"
-                        ><i class="fa-brands fa-instagram social-networks" style="font-size: 32px;"></i
+                        ><i
+                          class="fa-brands fa-instagram social-networks"
+                          style="font-size: 32px"
+                        ></i
                       ></a>
                     </li>
                     <li>
                       <a
                         href="https://www.linkedin.com/in/syed-raza-jan-bb808a176/"
                         class="text-decoration-none"
-                        ><i class="fa-brands fa-linkedin social-networks" style="font-size: 32px;"></i
+                        ><i
+                          class="fa-brands fa-linkedin social-networks"
+                          style="font-size: 32px"
+                        ></i
                       ></a>
                     </li>
                   </ul>
@@ -801,7 +794,7 @@
       </div>
       <figure class="footer-image mb-0">
         <img
-          src="./assets/images/footer-rightimage.png"
+          src="./assets/images/footer-rightimage.webp"
           alt=""
           class="img-fluid"
         />
@@ -831,12 +824,234 @@
     <script src="assets/js/animation_links.js"></script>
     <script src="assets/js/animation.js"></script>
     <script>
-      // Activate tab based on URL hash
-      $(document).ready(function () {
-        var hash = window.location.hash;
-        if (hash) {
-          // Remove the # and activate the corresponding tab
-          $('a[href="' + hash + '"]').tab("show");
+      // Load portfolio data from JSON
+      let portfolioData = {};
+      let currentPage = 1;
+      const itemsPerPage = 6;
+      let currentCategory = "all";
+
+      fetch("./portfolio.json")
+        .then((res) => res.json())
+        .then((data) => {
+          portfolioData = data.portfolio;
+          renderPortfolio();
+        });
+
+      // ===== INTERSECTION OBSERVER FOR LAZY LOADING =====
+      let imageObserver = null;
+
+      function initIntersectionObserver() {
+        if (imageObserver) {
+          imageObserver.disconnect();
+        }
+
+        const options = {
+          root: null,
+          rootMargin: "50px", // Load images 50px before they enter viewport
+          threshold: 0.01,
+        };
+
+        imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              const figure = img.closest("figure");
+
+              // Load the image
+              const src = img.getAttribute("data-src");
+              if (src) {
+                // Add blur effect while loading
+                figure?.classList.add("loading");
+
+                img.src = src;
+                img.removeAttribute("data-src");
+
+                // Handle successful load
+                img.onload = () => {
+                  img.classList.add("loaded");
+                  figure?.classList.remove("loading");
+                  figure?.classList.add("loaded");
+                };
+
+                // Handle load errors
+                img.onerror = () => {
+                  img.classList.add("error");
+                  figure?.classList.remove("loading");
+                  console.warn(`Failed to load image: ${src}`);
+                };
+              }
+
+              observer.unobserve(img);
+            }
+          });
+        }, options);
+      }
+
+      function renderPortfolio() {
+        const row = document.getElementById("dynamic-row");
+        if (!row) return;
+
+        let items = [];
+
+        // 1. DATA SOURCE SELECTION
+        if (currentCategory === "all") {
+          // Only show items from the "featured" section of your JSON
+          items = portfolioData.featured || [];
+        } else {
+          // Show all items from the specific category
+          const catKey = Object.keys(portfolioData).find(
+            (k) => k.toLowerCase() === currentCategory.toLowerCase(),
+          );
+          items = portfolioData[catKey] || [];
+        }
+
+        // 2. PAGINATION CALCULATION
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const paginatedItems = items.slice(
+          startIndex,
+          startIndex + itemsPerPage,
+        );
+
+        row.innerHTML = "";
+
+        // 3. RENDER WITH UNIFORM 3-COLUMN GRID (2x3 layout)
+        paginatedItems.forEach((project, index) => {
+          // All items same size - 3 column grid
+          const colClass = "col-lg-4 col-md-6 col-sm-12 col-12";
+          const figureClass = "tab-image mb-0";
+
+          const cat = project.category || currentCategory;
+          const id = project.id !== undefined ? project.id : index;
+          const displayTitle = project.title.replace(/_/g, " ");
+
+          const html = `
+            <div class="${colClass} mb-4">
+                <div class="portfolio-card-wrapper">
+                    <a href="project-detail.html?category=${cat}&id=${id}">
+                        <figure class="${figureClass}" style="background: #000; overflow: hidden; aspect-ratio: 1/1; position: relative;">
+                            <!-- Circle Loader -->
+                            <div class="skeleton-loader">
+                                <div class="circle-loader"></div>
+                            </div>
+                            <img data-src="${project.mainSrc}" class="img-fluid portfolio-card-img lazy-image" 
+                                 style="width:100%; height:100%; object-fit:cover;" 
+                                 width="800" height="800" alt="${displayTitle}">
+                            
+                            
+                            
+                            <!-- Content Container -->
+                            <div class="portfolio-content">
+                                <div class="portfolio-category-badge">
+                                    <span class="category-icon">
+                                        ${
+                                          cat
+                                            .toLowerCase()
+                                            .includes("architecture")
+                                            ? "🏢"
+                                            : cat
+                                                  .toLowerCase()
+                                                  .includes("interior")
+                                              ? "🛋️"
+                                              : "✨"
+                                        }
+                                    </span>
+                                    <span class="category-text">${cat}</span>
+                                </div>
+                                <h4 class="portfolio-title">${displayTitle}</h4>
+                                <div class="portfolio-view-btn">
+                                    <span class="view-text">View Project</span>
+                                    <span class="arrow-icon">→</span>
+                                </div>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+            </div>`;
+          row.insertAdjacentHTML("beforeend", html);
+        });
+
+        // Initialize Intersection Observer for new images
+        initIntersectionObserver();
+        const lazyImages = row.querySelectorAll(".lazy-image");
+        lazyImages.forEach((img) => imageObserver.observe(img));
+
+        renderPaginationUI(totalPages);
+      }
+
+      function renderPaginationUI(totalPages) {
+        const nav = document.getElementById("portfolio-pagination");
+        nav.innerHTML = "";
+        if (totalPages <= 1) return; // Hide if only 1 page
+
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement("button");
+          btn.innerText = i;
+          btn.className = `btn ${i === currentPage ? "btn-primary" : "btn-outline-light"} mx-1`;
+          btn.onclick = () => {
+            currentPage = i;
+            renderPortfolio();
+            window.scrollTo({
+              top: document.querySelector(".portfolio-section").offsetTop - 100,
+              behavior: "smooth",
+            });
+          };
+          nav.appendChild(btn);
+        }
+      }
+
+      // Handle Tab Switching with debouncing
+      let tabSwitchTimeout;
+      document.querySelectorAll(".nav-tabs a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Clear any pending tab switch
+          clearTimeout(tabSwitchTimeout);
+
+          document
+            .querySelectorAll(".nav-tabs a")
+            .forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+
+          currentCategory = this.getAttribute("href").replace("#", "");
+          currentPage = 1; // Reset to page 1
+
+          // Debounce rendering to avoid rapid re-renders
+          tabSwitchTimeout = setTimeout(() => {
+            renderPortfolio();
+          }, 100);
+        });
+      });
+
+      // ===== PERFORMANCE MONITORING =====
+      if ("PerformanceObserver" in window) {
+        try {
+          const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              // Monitor Largest Contentful Paint
+              if (entry.entryType === "largest-contentful-paint") {
+                console.log(`LCP: ${entry.renderTime || entry.loadTime}ms`);
+              }
+              // Monitor Layout Shifts
+              if (entry.entryType === "layout-shift" && !entry.hadRecentInput) {
+                console.log(`Layout Shift: ${entry.value}`);
+              }
+            }
+          });
+
+          observer.observe({
+            entryTypes: ["largest-contentful-paint", "layout-shift"],
+          });
+        } catch (e) {
+          console.log("Performance monitoring not available");
+        }
+      }
+
+      // Cleanup observer on page unload
+      window.addEventListener("beforeunload", () => {
+        if (imageObserver) {
+          imageObserver.disconnect();
         }
       });
     </script>

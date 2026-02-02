@@ -1,0 +1,354 @@
+{
+  "portfolio": {
+    "featured": [
+      {
+        "title": "Best Architecture",
+        "mainSrc": "./assets/Portfolio/architecture/3_Marla_kalam_cottages/00_17___Photo.webp",
+        "category": "architecture",
+        "id": 0
+      },
+      {
+        "title": "Best Interior",
+        "mainSrc": "../assets/Portfolio/Interior/3_Marla_Kalam_Cotages/1_1_(2).webp",
+        "category": "Interior",
+        "id": 2
+      },
+      {
+        "title": "Best Architecture",
+        "mainSrc": "./assets/Portfolio/architecture/3_Marla_kalam_cottages/00_17___Photo.webp",
+        "category": "architecture",
+        "id": 0
+      },
+      {
+        "title": "Best Interior",
+        "mainSrc": "../assets/Portfolio/Interior/3_Marla_Kalam_Cotages/1_1_(2).webp",
+        "category": "Interior",
+        "id": 2
+      },
+      {
+        "title": "Best Architecture",
+        "mainSrc": "./assets/Portfolio/architecture/3_Marla_kalam_cottages/00_17___Photo.webp",
+        "category": "architecture",
+        "id": 0
+      },
+      {
+        "title": "Best Interior",
+        "mainSrc": "../assets/Portfolio/Interior/3_Marla_Kalam_Cotages/1_1_(2).webp",
+        "category": "Interior",
+        "id": 2
+      }
+    ],
+    "architecture": [
+      {
+        "title": "3_Marla_kalam_cottages",
+        "mainSrc": "./assets/Portfolio/architecture/3_Marla_kalam_cottages/00_17___Photo.webp",
+        "other": [
+          "./assets/Portfolio/architecture/3_Marla_kalam_cottages/00_18___Photo.webp",
+          "./assets/Portfolio/architecture/3_Marla_kalam_cottages/00_20___Photo.webp",
+          "./assets/Portfolio/architecture/3_Marla_kalam_cottages/1_1.webp",
+          "./assets/Portfolio/architecture/3_Marla_kalam_cottages/E_01.webp"
+        ]
+      },
+      {
+        "title": "5_Marla_Cottages",
+        "mainSrc": "./assets/Portfolio/architecture/5_Marla_Cottages/00_14___Photo.webp",
+        "other": [
+          "./assets/Portfolio/architecture/5_Marla_Cottages/00_15___Photo.webp",
+          "./assets/Portfolio/architecture/5_Marla_Cottages/00_16___Photo.webp",
+          "./assets/Portfolio/architecture/5_Marla_Cottages/00_17___Photo.webp"
+        ]
+      },
+      {
+        "title": "Ashab_House",
+        "mainSrc": "./assets/Portfolio/architecture/Ashab_House/Ashab_House_Kda_Kohat.webp",
+        "other": [
+          "./assets/Portfolio/architecture/Ashab_House/Ashab_House_Kda_Kohat_Day.webp"
+        ]
+      },
+      {
+        "title": "Captain_Fasail",
+        "mainSrc": "./assets/Portfolio/architecture/Captain_Fasail/00.webp",
+        "other": []
+      },
+      {
+        "title": "Cecil_Kalam",
+        "mainSrc": "./assets/Portfolio/architecture/Cecil_Kalam/00_(1).webp",
+        "other": [
+          "./assets/Portfolio/architecture/Cecil_Kalam/00_(1).webp",
+          "./assets/Portfolio/architecture/Cecil_Kalam/00_(2).webp",
+          "./assets/Portfolio/architecture/Cecil_Kalam/00_(3).webp",
+          "./assets/Portfolio/architecture/Cecil_Kalam/00_(4).webp",
+          "./assets/Portfolio/architecture/Cecil_Kalam/00_(4).webp",
+          "./assets/Portfolio/architecture/Cecil_Kalam/00_(5).webp",
+          "./assets/Portfolio/architecture/Cecil_Kalam/00_(6).webp"
+        ]
+      },
+      {
+        "title": "Dr_Adnan_Faisal_Town",
+        "mainSrc": "./assets/Portfolio/architecture/Dr_Adnan_Faisal_Town/E_4.webp",
+        "other": [
+          "./assets/Portfolio/architecture/Dr_Adnan_Faisal_Town/E_6.webp"
+        ]
+      },
+      {
+        "title": "Dr_Haider_House_I_14_Islamabad",
+        "mainSrc": "./assets/Portfolio/architecture/Dr_Haider_House_I_14_Islamabad/06_copy_1.webp",
+        "other": []
+      },
+      {
+        "title": "Imam_Bargah_Kohat",
+        "mainSrc": "./assets/Portfolio/architecture/Imam_Bargah_Kohat/1_6.webp",
+        "other": []
+      },
+      {
+        "title": "Kalam_Height",
+        "mainSrc": "./assets/Portfolio/architecture/Kalam_Height/01_5___Photo.webp",
+        "other": [
+          "./assets/Portfolio/architecture/Kalam_Height/01_7___Photo.webp",
+          "./assets/Portfolio/architecture/Kalam_Height/01_8___Photo.webp",
+          "./assets/Portfolio/architecture/Kalam_Height/01_9___Photo.webp"
+        ]
+      },
+      {
+        "title": "Miss_Shoaib_Attock",
+        "mainSrc": "./assets/Portfolio/architecture/Miss_Shoaib_Attock/02_Photo___2.webp",
+        "other": []
+      },
+      {
+        "title": "Muhammad_Noor_Kohat_KDA",
+        "mainSrc": "./assets/Portfolio/architecture/Muhammad_Noor_Kohat_KDA/00_Photo___1.webp",
+        "other": [
+          "./assets/Portfolio/architecture/Muhammad_Noor_Kohat_KDA/00_Photo___4.webp",
+          "./assets/Portfolio/architecture/Muhammad_Noor_Kohat_KDA/00_Photo___5.webp",
+          "./assets/Portfolio/architecture/Muhammad_Noor_Kohat_KDA/00_Photo___7.webp"
+        ]
+      },
+      {
+        "title": "Muhtashim_Kohat_KDA",
+        "mainSrc": "./assets/Portfolio/architecture/Muhtashim_Kohat_KDA/P_2_Photo___2_copy.webp",
+        "other": [
+          "./assets/Portfolio/architecture/Muhtashim_Kohat_KDA/P_2_Photo___3.webp"
+        ]
+      },
+      {
+        "title": "Sir_Haider_Kohat_Usterzai",
+        "mainSrc": "./assets/Portfolio/architecture/Sir_Haider_Kohat_Usterzai/Haider_House.webp",
+        "other": []
+      },
+      {
+        "title": "Swat_Cottage",
+        "mainSrc": "./assets/Portfolio/architecture/Swat_Cottage/00.webp",
+        "other": [
+          "./assets/Portfolio/architecture/Swat_Cottage/00_Photo___3.webp",
+          "./assets/Portfolio/architecture/Swat_Cottage/00_Photo___3_copy.webp",
+          "./assets/Portfolio/architecture/Swat_Cottage/00_Photo___4.webp",
+          "./assets/Portfolio/architecture/Swat_Cottage/00_Photo___5.webp",
+          "./assets/Portfolio/architecture/Swat_Cottage/00_Photo___6.webp"
+        ]
+      },
+      {
+        "title": "relax_thailand",
+        "mainSrc": "./assets/Portfolio/architecture/relax_thailand/cam_01.webp",
+        "other": [
+          "./assets/Portfolio/architecture/relax_thailand/cam_02.webp",
+          "./assets/Portfolio/architecture/relax_thailand/cam_03.webp",
+          "./assets/Portfolio/architecture/relax_thailand/cam_04.webp"
+        ]
+      }
+    ],
+    "Interior": [
+      {
+        "title": "3_Marla_Kalam_Cotages",
+        "mainSrc": "./assets/Portfolio/Interior/3_Marla_Kalam_Cotages/1_1_(2).webp",
+        "other": ["./assets/Portfolio/Interior/3_Marla_Kalam_Cotages/1_2.webp"]
+      },
+      {
+        "title": "Cecil_Kalam",
+        "mainSrc": "./assets/Portfolio/Interior/Cecil_Kalam/2_bed/2_BED_01_(1).webp",
+        "other": [
+          "./assets/Portfolio/Interior/Cecil_Kalam/2_bed/2_BED_01_(2).webp",
+          "./assets/Portfolio/Interior/Cecil_Kalam/2_bed/2_BED_02_(1).webp",
+          "./assets/Portfolio/Interior/Cecil_Kalam/2_bed/2_BED_02_(2).webp",
+          "./assets/Portfolio/Interior/Cecil_Kalam/3_bed/3_BED_01.webp",
+          "./assets/Portfolio/Interior/Cecil_Kalam/3_bed/3_BED_02.webp"
+        ]
+      },
+      {
+        "title": "Dr_Aurenzaib",
+        "mainSrc": "./assets/Portfolio/Interior/Dr_Aurenzaib/00_Photo___1.webp",
+        "other": [
+          "./assets/Portfolio/Interior/Dr_Aurenzaib/00_Photo___2.webp",
+          "./assets/Portfolio/Interior/Dr_Aurenzaib/00_Photo___5.webp",
+          "./assets/Portfolio/Interior/Dr_Aurenzaib/00_Photo___6.webp",
+          "./assets/Portfolio/Interior/Dr_Aurenzaib/00_Photo___7.webp",
+          "./assets/Portfolio/Interior/Dr_Aurenzaib/01_Photo___3.webp",
+          "./assets/Portfolio/Interior/Dr_Aurenzaib/01_Photo___4.webp"
+        ]
+      },
+      {
+        "title": "Major_Akram",
+        "mainSrc": "./assets/Portfolio/Interior/Major_Akram/00.webp",
+        "other": [
+          "./assets/Portfolio/Interior/Major_Akram/01.webp",
+          "./assets/Portfolio/Interior/Major_Akram/02_Photo___5.webp",
+          "./assets/Portfolio/Interior/Major_Akram/02_Photo___7.webp",
+          "./assets/Portfolio/Interior/Major_Akram/02_Photo___8.webp",
+          "./assets/Portfolio/Interior/Major_Akram/03.webp",
+          "./assets/Portfolio/Interior/Major_Akram/03_(2).webp",
+          "./assets/Portfolio/Interior/Major_Akram/1_4.webp"
+        ]
+      },
+      {
+        "title": "Major_Tufail_Ahmed",
+        "mainSrc": "./assets/Portfolio/Interior/Major_Tufail_Ahmed/03.webp",
+        "other": [
+          "./assets/Portfolio/Interior/Major_Tufail_Ahmed/05.webp",
+          "./assets/Portfolio/Interior/Major_Tufail_Ahmed/Cam_01.webp",
+          "./assets/Portfolio/Interior/Major_Tufail_Ahmed/Cam_02.webp",
+          "./assets/Portfolio/Interior/Major_Tufail_Ahmed/Cam_04.webp",
+          "./assets/Portfolio/Interior/Major_Tufail_Ahmed/Cam_05.webp"
+        ]
+      },
+      {
+        "title": "Ramonhomes_Interior",
+        "mainSrc": "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_01.webp",
+        "other": [
+          "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_02.webp",
+          "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_02_0.webp",
+          "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_03.webp",
+          "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_04.webp",
+          "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_05.webp",
+          "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_06.webp",
+          "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_07.webp",
+          "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_08.webp"
+        ]
+      },
+      {
+        "title": "Regiency_height",
+        "mainSrc": "./assets/Portfolio/Interior/Regiency_height/2F_201.webp",
+        "other": [
+          "./assets/Portfolio/Interior/Regiency_height/2F_210.webp",
+          "./assets/Portfolio/Interior/Regiency_height/2F_211.webp",
+          "./assets/Portfolio/Interior/Regiency_height/2F_214.webp",
+          "./assets/Portfolio/Interior/Regiency_height/2F_221.webp",
+          "./assets/Portfolio/Interior/Regiency_height/6F_601.webp",
+          "./assets/Portfolio/Interior/Regiency_height/6F_603.webp",
+          "./assets/Portfolio/Interior/Regiency_height/6F_622.webp",
+          "./assets/Portfolio/Interior/Regiency_height/6F_625.webp",
+          "./assets/Portfolio/Interior/Regiency_height/9F_902.webp"
+        ]
+      },
+      {
+        "title": "Wdan_Office",
+        "mainSrc": "./assets/Portfolio/Interior/Wdan_Office/Cam_0_1.webp",
+        "other": [
+          "./assets/Portfolio/Interior/Wdan_Office/Cam_0_2.webp",
+          "./assets/Portfolio/Interior/Wdan_Office/Cam_0_3.webp",
+          "./assets/Portfolio/Interior/Wdan_Office/Cam_0_4.webp",
+          "./assets/Portfolio/Interior/Wdan_Office/Cam_0_5.webp",
+          "./assets/Portfolio/Interior/Wdan_Office/Cam_0_6.webp"
+        ]
+      }
+    ],
+    "Visualization": [
+      {
+        "title": "Al_Nasir_Tower_Peshawer",
+        "mainSrc": "./assets/Portfolio/Visualization/Al_Nasir_Tower_Peshawer/H_01.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Al_Nasir_Tower_Peshawer/H_03.webp"
+        ]
+      },
+      {
+        "title": "Ar_Ilyas_Bahria_Enclave",
+        "mainSrc": "./assets/Portfolio/Visualization/Ar_Ilyas_Bahria_Enclave/00.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Ar_Ilyas_Bahria_Enclave/01.webp"
+        ]
+      },
+      {
+        "title": "Ar_Mehnaz_Islamabad",
+        "mainSrc": "./assets/Portfolio/Visualization/Ar_Mehnaz_Islamabad/00.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Ar_Mehnaz_Islamabad/00_Photo___1.webp",
+          "./assets/Portfolio/Visualization/Ar_Mehnaz_Islamabad/00_Photo___2.webp",
+          "./assets/Portfolio/Visualization/Ar_Mehnaz_Islamabad/00_Photo___3.webp",
+          "./assets/Portfolio/Visualization/Ar_Mehnaz_Islamabad/00_Photo___5.webp",
+          "./assets/Portfolio/Visualization/Ar_Mehnaz_Islamabad/01.webp"
+        ]
+      },
+      {
+        "title": "Camroninc_United_State",
+        "mainSrc": "./assets/Portfolio/Visualization/Camroninc_United_State/R_04.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Camroninc_United_State/R_05.webp"
+        ]
+      },
+      {
+        "title": "Capital_Degree_College",
+        "mainSrc": "./assets/Portfolio/Visualization/Capital_Degree_College/02_Photo___1.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Capital_Degree_College/02_Photo___2.webp"
+        ]
+      },
+      {
+        "title": "Cmi_Architect_California",
+        "mainSrc": "./assets/Portfolio/Visualization/Cmi_Architect_California/00_Photo___1.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Cmi_Architect_California/00_Photo___2.webp",
+          "./assets/Portfolio/Visualization/Cmi_Architect_California/00_Photo___3.webp"
+        ]
+      },
+      {
+        "title": "Hscottpeters_United_Kingdom",
+        "mainSrc": "./assets/Portfolio/Visualization/Hscottpeters_United_Kingdom/00_Photo___1.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Hscottpeters_United_Kingdom/00_Photo___2.webp",
+          "./assets/Portfolio/Visualization/Hscottpeters_United_Kingdom/00_Photo___3.webp",
+          "./assets/Portfolio/Visualization/Hscottpeters_United_Kingdom/00_Photo___4.webp"
+        ]
+      },
+      {
+        "title": "KBs_Height_Peshawer",
+        "mainSrc": "./assets/Portfolio/Visualization/KBs_Height_Peshawer/00_Photo___4.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/KBs_Height_Peshawer/00_Photo___6.webp"
+        ]
+      },
+      {
+        "title": "Natalieyeti_Canada",
+        "mainSrc": "./assets/Portfolio/Visualization/Natalieyeti_Canada/00_Photo___10.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Natalieyeti_Canada/00_Photo___4.webp",
+          "./assets/Portfolio/Visualization/Natalieyeti_Canada/00_Photo___7.webp",
+          "./assets/Portfolio/Visualization/Natalieyeti_Canada/01_Photo___2.webp"
+        ]
+      },
+      {
+        "title": "Qatar_Heights_Peshawer",
+        "mainSrc": "./assets/Portfolio/Visualization/Qatar_Heights_Peshawer/02.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Qatar_Heights_Peshawer/1_1.webp",
+          "./assets/Portfolio/Visualization/Qatar_Heights_Peshawer/1_2.webp",
+          "./assets/Portfolio/Visualization/Qatar_Heights_Peshawer/1_3.webp"
+        ]
+      },
+      {
+        "title": "Rhysdutton",
+        "mainSrc": "./assets/Portfolio/Visualization/Rhysdutton/03_1.webp",
+        "other": ["./assets/Portfolio/Visualization/Rhysdutton/Cam_10.webp"]
+      },
+      {
+        "title": "Royal_One9",
+        "mainSrc": "./assets/Portfolio/Visualization/Royal_One9/00_Photo___2.webp",
+        "other": [
+          "./assets/Portfolio/Visualization/Royal_One9/00_Photo___3.webp",
+          "./assets/Portfolio/Visualization/Royal_One9/Image_(1).webp",
+          "./assets/Portfolio/Visualization/Royal_One9/Image_(2).webp",
+          "./assets/Portfolio/Visualization/Royal_One9/Image_(3).webp",
+          "./assets/Portfolio/Visualization/Royal_One9/Image_(4).webp",
+          "./assets/Portfolio/Visualization/Royal_One9/Karachi_royal_one_9.webp"
+        ]
+      }
+    ]
+  }
+}

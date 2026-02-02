@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="zxx">
+  <head>
+    <title>Portfolio | Rcubes Design</title>
+    <!-- /SEO Ultimate -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <meta charset="utf-8" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/Rcube_logo.webp"
+      type="image/x-icon"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.webp" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/js/bootstrap.min.js" />
+    <!-- Font Awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- StyleSheet link CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom-style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="assets/css/special-classes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" media="screen" />
+
+    <!-- Project Detail Styles -->
+    <style>
+      .project-detail-section {
+        padding: 80px 0;
+        background: #f8f8f8;
+      }
+
+      .project-title {
+        font-size: 48px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 40px;
+        text-transform: capitalize;
+        letter-spacing: -0.5px;
+      }
+
+      #image-gallery {
+        display: grid;
+        gap: 20px;
+      }
+
+      #image-gallery img {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      #image-gallery img:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      @media (max-width: 768px) {
+        .project-title {
+          font-size: 32px;
+          margin-bottom: 30px;
+        }
+
+        .project-detail-section {
+          padding: 60px 0;
+        }
+      }
+    </style>
+
+    <!-- slider animations css-->
+  </head>
+
+  <body>
+    <!-- Header  -->
+    <header
+      id="top"
+      class="header-home"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: rgba(50, 50, 50, 0.95) !important;
+        padding-bottom: 20px;
+        height: 90px;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          z-index: 4;
+          left: 0;
+          top: 0;
+          width: 45.47vmin;
+          height: 40.7vmin;
+          padding: 4.8vmin 2em 4.8vmin;
+          background-color: transparent;
+          text-align: center;
+          transition: all 0.3s;
+        "
+      >
+        <a href="#top" class="brand js-target-scroll">
+          <span>Rcubes Design</span>
+        </a>
+        <!-- <div class="brand-name">Rcubes design</div> -->
+      </div>
+
+      <!-- Navigation Desctop -->
+
+      <nav class="navbar-desctop visible-md visible-lg">
+        <div class="container">
+          <a href="#top" class="brand js-target-scroll">
+            <span>Rcubes Design</span>
+          </a>
+          <ul class="nav navbar-desctop-menu">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./index.html#services">Services</a>
+            </li>
+            <li>
+              <a href="./index.html#about">About</a>
+            </li>
+            <li class="active">
+              <a href="./portfolio.html">Projects</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Navigation Mobile -->
+
+      <nav class="nav navbar-mobile">
+        <a href="#top" class="brand js-target-scroll">
+          <span>Rcubes design</span>
+        </a>
+
+        <!-- Navbar Collapse -->
+
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#navbar-mobile"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-mobile">
+          <ul class="navbar-nav-mobile">
+            <li class="active">
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./index.html#services">Services</a>
+            </li>
+            <li>
+              <a href="./index.html#about">About</a>
+            </li>
+            <li>
+              <a href="./portfolio.html">Projects</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="sub-banner">
+      <figure class="light-image mb-0">
+        <img
+          src="./assets/images/top-lightimage.webp"
+          alt=""
+          class="img-fluid"
+        />
+      </figure>
+
+      <section class="banner-section" style="padding-top: 250px; height: 100vh">
+        <div class="container-fluid">
+          <div class="row">
+            <div
+              class="col-lg-5 col-md-12 col-sm-12 col-12 order-lg-1 order-2 banner-column"
+            >
+              <div class="banner_content" data-aos="fade-left">
+                <div class="content">
+                  <h1>Our Portfolio</h1>
+                  <p>
+                    Guis aute irure dolor in rearehenderit in eouta velireu esse
+                    fugiat nulla pariatur.
+                  </p>
+                  <div class="box">
+                    <span class="mb-0">Home</span>
+                    <span class="mb-0 dash">-</span>
+                    <span class="mb-0 box_span">Portfolio</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-12 col-sm-12 col-12 order-lg-2 order-1">
+              <div class="banner_wrapper">
+                <figure class="sub-bannerimage mb-0" data-aos="fade-up">
+                  <img
+                    src="./assets/images/portfolio-bannerimage.webp"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12">
+            <h1 id="project-title" class="project-title">Loading...</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div id="image-gallery" class="col-12"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="subheading" data-aos="fade-right">
+              <h6>What’s New</h6>
+              <h2>Recent Work We Have Done</h2>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-box tabs-options">
+          <ul class="nav nav-tabs">
+            <li><a class="active" data-toggle="tab" href="#all">All</a></li>
+            <li><a data-toggle="tab" href="#architecture">Architecture</a></li>
+            <li><a data-toggle="tab" href="#interior">Interior</a></li>
+            <li>
+              <a data-toggle="tab" href="#visualization">Visualization</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="all" class="tab-pane active" data-category="all">
+              <div class="row position-relative" data-aos="fade-up"></div>
+            </div>
+            <div
+              id="architecture"
+              class="tab-pane"
+              data-category="architecture"
+            >
+              <div class="row position-relative"></div>
+            </div>
+            <div id="interior" class="tab-pane" data-category="interior">
+              <div class="row position-relative"></div>
+            </div>
+            <div
+              id="visualization"
+              class="tab-pane"
+              data-category="visualization"
+            >
+              <div class="row position-relative"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination-container text-center mt-5">
+          <div
+            id="portfolio-pagination"
+            class="d-flex justify-content-center align-items-center gap-3"
+          ></div>
+      </div>
+      </div>
+    </section> -->
+
+    <!-- OUR Clients -->
+    <section class="testimonial-section" style="overflow-x: hidden">
+      <div class="logo-marquee-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center mb-4">
+              <h2>Our Clients</h2>
+            </div>
+          </div>
+        </div>
+        <div class="logo-marquee-track">
+          <!-- First set of logos -->
+          <!--  -->
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/0001.webp" alt="Partner 1" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/canopy.webp" alt="Partner 2" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/cecil.webp" alt="Partner 3" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/hl.webp" alt="Partner 4" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/0001.webp" alt="Partner 1" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/canopy.webp" alt="Partner 2" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/cecil.webp" alt="Partner 3" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/hl.webp" alt="Partner 4" />
+          </div>
+          <!-- Duplicate set for seamless looping (8 duplicates to match the calculation in CSS) -->
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/0001.webp" alt="Partner 1" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/canopy.webp" alt="Partner 2" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/cecil.webp" alt="Partner 3" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/hl.webp" alt="Partner 4" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/0001.webp" alt="Partner 1" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/canopy.webp" alt="Partner 2" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/cecil.webp" alt="Partner 3" />
+          </div>
+          <div class="logo-marquee-slide">
+            <img src="./assets/images/hl.webp" alt="Partner 4" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <section class="footer-section" style="overflow-x: hidden">
+      <div class="container">
+        <div class="middle-portion">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="logo-content">
+                <a href="./index.html">
+                  <figure class="footer-logo">
+                    <img
+                      src="./assets/images/Rcube_logo.webp"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </figure>
+                </a>
+                <h3 class="text-white">
+                  Want to Create Something Great Together?
+                </h3>
+                <div class="footer-button">
+                  <a
+                    class="get_started text-decoration-none"
+                    href="./contact.html"
+                    >Get Started</a
+                  >
+                  <a
+                    class="image-button text-decoration-none"
+                    href="./contact.html"
+                  >
+                    <figure class="arrow mb-0">
+                      <img
+                        src="./assets/images/arrow.webp"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="links">
+                <h4 class="text-white">Contact Info:</h4>
+                <div class="lower-content">
+                  <figure class="icon">
+                    <img
+                      src="./assets/images/footer-callicon.webp"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </figure>
+                  <div class="content">
+                    <span class="text-size-16">Call us at:</span>
+                    <a
+                      class="text-size-16 mb-0 text-decoration-none"
+                      href="tel:+568925896325"
+                      >+92 346 5564074</a
+                    >
+                  </div>
+                </div>
+                <div class="lower-content">
+                  <figure class="icon">
+                    <img
+                      src="./assets/images/footer-locationicon.webp"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </figure>
+                  <div class="content">
+                    <span class="text-size-16">Our Location:</span>
+                    <p class="text text-size-16">121 Street Lahore, Pakistan</p>
+                  </div>
+                </div>
+                <div class="lower-content">
+                  <figure class="icon icon3">
+                    <img
+                      src="./assets/images/footer-emailicon.webp"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </figure>
+                  <div class="content">
+                    <span class="text-size-16">Email us at:</span>
+                    <a
+                      href="mailto:contact@rcubesdesign.com"
+                      class="text-size-16 mb-0 text-decoration-none"
+                      >contact@rcubesdesign.com</a
+                    >
+                    <a
+                      href="mailto:rcubesdesign@gmail.com"
+                      class="text-size-16 mb-0 text-decoration-none"
+                      >rcubesdesign@gmail.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 d-lg-block d-none">
+              <div class="info">
+                <h4 class="text-white">Subscribe to Our Newsletter:</h4>
+                <form method="POST">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form_style"
+                      placeholder="Enter Your Email Address:"
+                      name="email"
+                    />
+                    <button>
+                      <i class="send fa-sharp fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </form>
+                <ul class="list-unstyled mb-0">
+                  <li class="text">
+                    Subscribe to our newsletter to receive the latest news and
+                    exclusive offers directly in your inbox.
+                  </li>
+                </ul>
+                <div class="social-icons position-relative">
+                  <ul class="list-unstyled mb-0 p-0 position-absolute">
+                    <li>
+                      <a
+                        href="https://www.fiverr.com/s/vvj4kYL"
+                        target="_blank"
+                      >
+                        <img
+                          src="./assets/images/icons8-fiverr-48.webp"
+                          style="
+                            width: 3rem;
+                            position: relative;
+                            bottom: 6px;
+                            left: 8px;
+                          "
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100075647156373"
+                        class="text-decoration-none"
+                        ><i
+                          class="fa-brands fa-facebook social-networks"
+                          style="font-size: 32px"
+                        ></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.behance.net/arrazajan6a02"
+                        class="text-decoration-none"
+                        ><i
+                          class="fa-brands fa-behance social-networks"
+                          style="font-size: 32px"
+                        ></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/rcubesdesign/"
+                        class="text-decoration-none"
+                        ><i
+                          class="fa-brands fa-instagram social-networks"
+                          style="font-size: 32px"
+                        ></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/syed-raza-jan-bb808a176/"
+                        class="text-decoration-none"
+                        ><i
+                          class="fa-brands fa-linkedin social-networks"
+                          style="font-size: 32px"
+                        ></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figure class="footer-image mb-0">
+        <img
+          src="./assets/images/footer-rightimage.webp"
+          alt=""
+          class="img-fluid"
+        />
+      </figure>
+      <!--footer area-->
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-size-14">
+                Copyright © 2023 Rcubes Design All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Latest compiled JavaScript -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/video_link.js"></script>
+    <script src="./assets/js/video.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/custom-carousel.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/animation_links.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script>
+      // Load portfolio data from JSON
+      async function loadProjectDetails() {
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const category = params.get("category");
+          const id = parseInt(params.get("id"));
+
+          if (!category || id === null) {
+            document.getElementById("project-title").innerText = "Project not found";
+            return;
+          }
+
+          const response = await fetch("./portfolio.json");
+          const data = await response.json();
+
+          const categoryProjects = data.portfolio[category.toLowerCase()];
+          if (!categoryProjects || !categoryProjects[id]) {
+            document.getElementById("project-title").innerText = "Project not found";
+            return;
+          }
+
+          const project = categoryProjects[id];
+
+          // Display Title
+          document.getElementById("project-title").innerText =
+            project.title.replace(/_/g, " ");
+
+          // Display Images in Grid
+          const gallery = document.getElementById("image-gallery");
+          let imagesHTML = `<div class="col-12 mb-4"><img src="${project.mainSrc}" class="img-fluid w-100" alt="${project.title}"></div>`;
+
+          // Display Other Images in 2-column layout
+          if (project.other && project.other.length > 0) {
+            imagesHTML += `<div class="row" style="margin-top: 20px;">`;
+            project.other.forEach((imgSrc) => {
+              imagesHTML += `
+                <div class="col-md-6 mb-4">
+                    <img src="${imgSrc}" class="img-fluid w-100" alt="${project.title}" loading="lazy">
+                </div>`;
+            });
+            imagesHTML += `</div>`;
+          }
+
+          gallery.innerHTML = imagesHTML;
+        } catch (error) {
+          console.error("Error loading project details:", error);
+          document.getElementById("project-title").innerText = "Error loading project";
+        }
+      }
+
+      // Load on page load
+      document.addEventListener("DOMContentLoaded", loadProjectDetails);
+    </script>
+  </body>
+</html>
