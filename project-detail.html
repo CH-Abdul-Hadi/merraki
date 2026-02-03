@@ -118,6 +118,12 @@
         }
       }
     </style>
+    <!-- email js  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <!-- email js  -->
   </head>
 
   <body>
@@ -375,7 +381,9 @@
                   </figure>
                   <div class="content">
                     <span class="text-size-16">Our Location:</span>
-                    <p class="text text-size-16">House no 41 main street 1, 1 11/2 Islamabad</p>
+                    <p class="text text-size-16">
+                      House no 41 main street 1, 1 11/2 Islamabad
+                    </p>
                   </div>
                 </div>
                 <div class="lower-content">
@@ -405,15 +413,16 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 d-lg-block d-none">
               <div class="info">
                 <h4 class="text-white">Subscribe to Our Newsletter:</h4>
-                <form method="POST">
+                <form id="newsletter-form" method="POST">
                   <div class="form-group">
                     <input
-                      type="text"
+                      type="email"
                       class="form_style"
                       placeholder="Enter Your Email Address:"
                       name="email"
+                      required
                     />
-                    <button>
+                    <button type="submit">
                       <i class="send fa-sharp fa-solid fa-paper-plane"></i>
                     </button>
                   </div>
@@ -511,6 +520,7 @@
       </div>
     </section>
 
+    <script src="assets/js/email-setup.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -542,7 +552,7 @@
     </script>
 
     <script>
-      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event("resize"));
       async function loadProjectDetails() {
         try {
           const params = new URLSearchParams(window.location.search);

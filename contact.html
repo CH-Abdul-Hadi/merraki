@@ -56,11 +56,6 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("GFdkElZQTfFFzfJP5");
-      })();
-    </script>
     <!-- email js  -->
   </head>
 
@@ -489,15 +484,16 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 d-lg-block d-none">
               <div class="info">
                 <h4 class="text-white">Subscribe to Our Newsletter:</h4>
-                <form method="POST">
+                <form id="newsletter-form" method="POST">
                   <div class="form-group">
                     <input
-                      type="text"
+                      type="email"
                       class="form_style"
                       placeholder="Enter Your Email Address:"
                       name="email"
+                      required
                     />
-                    <button>
+                    <button type="submit">
                       <i class="send fa-sharp fa-solid fa-paper-plane"></i>
                     </button>
                   </div>
@@ -606,36 +602,6 @@
     <script src="assets/js/animation_links.js"></script>
     <script src="assets/js/animation.js"></script>
 
-    <script>
-      window.dispatchEvent(new Event("resize"));
-      const btn = document.getElementById("submit-btn");
-      const btnText = document.getElementById("btn-text");
-
-      document
-        .getElementById("contactpage")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          btnText.innerHTML = "Sending...";
-          btn.disabled = true;
-
-          emailjs.sendForm("service_l4317ac", "template_qsfs9g3", this).then(
-            () => {
-              btnText.innerHTML = "Send Now";
-              btn.disabled = false;
-              alert("Message sent successfully! We will get back to you soon.");
-              document.getElementById("contactpage").reset();
-            },
-            (err) => {
-              btnText.innerHTML = "Send Now";
-              btn.disabled = false;
-              alert(
-                "Failed to send message. Please try again. Error: " +
-                  JSON.stringify(err),
-              );
-            },
-          );
-        });
-    </script>
+    <script src="assets/js/email-setup.js"></script>
   </body>
 </html>

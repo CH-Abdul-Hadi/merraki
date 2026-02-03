@@ -52,6 +52,12 @@
     />
     <link href="css/style.css" rel="stylesheet" media="screen" />
     <!-- slider animations css-->
+    <!-- email js  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <!-- email js  -->
   </head>
 
   <body>
@@ -296,9 +302,7 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                  >
-                
-                  </div>
+                  ></div>
                 </li>
                 <!-- Slide 2 -->
                 <li
@@ -394,9 +398,7 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                  >
-                  
-                  </div>
+                  ></div>
                 </li>
                 <!-- Slide 3 -->
 
@@ -493,8 +495,7 @@
                     data-splitin="none"
                     data-splitout="none"
                     data-responsive_offset="on"
-                  >
-                  </div>
+                  ></div>
                 </li>
               </ul>
             </div>
@@ -533,7 +534,7 @@
                   <span class="text-white text-size-16"
                     >Architectural - Modern Living</span
                   >
-                  <h4 class="text-white"> Defining the Future Skyline </h4>
+                  <h4 class="text-white">Defining the Future Skyline</h4>
                   <a
                     class="text-decoration-none"
                     href="./portfolio.html#architecture"
@@ -562,8 +563,8 @@
               <div class="box-content">
                 <div class="content">
                   <span class="text-white text-size-16"
-                    >Interior - Luxury Living </span
-                  >
+                    >Interior - Luxury Living
+                  </span>
                   <h4 class="text-white">Artistry in Every Detail</h4>
                   <a
                     class="text-decoration-none"
@@ -593,8 +594,8 @@
               <div class="box-content">
                 <div class="content">
                   <span class="text-white text-size-16"
-                    >Visualization - Hyper Real Art </span
-                  >
+                    >Visualization - Hyper Real Art
+                  </span>
                   <h4 class="text-white">Digital Craftsmanship</h4>
                   <a
                     class="text-decoration-none"
@@ -1256,7 +1257,9 @@
                   </figure>
                   <div class="content">
                     <span class="text-size-16">Our Location:</span>
-                    <p class="text text-size-16">House no 41 main street 1, 1 11/2 Islamabad</p>
+                    <p class="text text-size-16">
+                      House no 41 main street 1, 1 11/2 Islamabad
+                    </p>
                   </div>
                 </div>
                 <div class="lower-content">
@@ -1286,15 +1289,16 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 d-lg-block d-none">
               <div class="info">
                 <h4 class="text-white">Subscribe to Our Newsletter:</h4>
-                <form method="POST">
+                <form id="newsletter-form" method="POST">
                   <div class="form-group">
                     <input
-                      type="text"
+                      type="email"
                       class="form_style"
                       placeholder="Enter Your Email Address:"
                       name="email"
+                      required
                     />
-                    <button>
+                    <button type="submit">
                       <i class="send fa-sharp fa-solid fa-paper-plane"></i>
                     </button>
                   </div>
@@ -1436,6 +1440,7 @@
     <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
     <script src="js/rev-slider/revolution.extension.video.min.js"></script>
     <script src="js/interface.js"></script>
+    <script src="assets/js/email-setup.js"></script>
     <script>
       window.dispatchEvent(new Event("resize"));
       (function () {
