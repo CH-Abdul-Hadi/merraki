@@ -2,40 +2,52 @@
   "portfolio": {
     "featured": [
       {
-        "title": "Best Architecture",
+        "title": "Kalam Cottages",
         "mainSrc": "./assets/Portfolio/architecture/3_Marla_kalam_cottages/00_17___Photo.webp",
         "category": "architecture",
         "id": 0
       },
       {
-        "title": "Best Interior",
+        "title": "Modern Interior",
         "mainSrc": "./assets/Portfolio/Interior/3_Marla_Kalam_Cotages/1_1_(2).webp",
         "category": "interior",
-        "id": 2
-      },
-      {
-        "title": "Best Architecture",
-        "mainSrc": "./assets/Portfolio/architecture/3_Marla_kalam_cottages/00_17___Photo.webp",
-        "category": "architecture",
         "id": 0
       },
       {
-        "title": "Best Interior",
-        "mainSrc": "./assets/Portfolio/Interior/3_Marla_Kalam_Cotages/1_1_(2).webp",
-        "category": "interior",
-        "id": 2
+        "title": "Cecil Kalam Architecture",
+        "mainSrc": "./assets/Portfolio/architecture/Cecil_Kalam/00_(1).webp",
+        "category": "architecture",
+        "id": 4
       },
       {
-        "title": "Best Architecture",
-        "mainSrc": "./assets/Portfolio/architecture/3_Marla_kalam_cottages/00_17___Photo.webp",
-        "category": "architecture",
+        "title": "Ramonhomes Interior",
+        "mainSrc": "./assets/Portfolio/Interior/Ramonhomes_Interior/Cam_01.webp",
+        "category": "interior",
+        "id": 5
+      },
+      {
+        "title": "Al Nasir Tower",
+        "mainSrc": "./assets/Portfolio/Visualization/Al_Nasir_Tower_Peshawer/H_01.webp",
+        "category": "visualization",
         "id": 0
       },
       {
-        "title": "Best Interior",
-        "mainSrc": "./assets/Portfolio/Interior/3_Marla_Kalam_Cotages/1_1_(2).webp",
+        "title": "5 Marla Cottages",
+        "mainSrc": "./assets/Portfolio/architecture/5_Marla_Cottages/00_14___Photo.webp",
+        "category": "architecture",
+        "id": 1
+      },
+      {
+        "title": "Major Akram Residence",
+        "mainSrc": "./assets/Portfolio/Interior/Major_Akram/00.webp",
         "category": "interior",
-        "id": 2
+        "id": 3
+      },
+      {
+        "title": "Qatar Heights",
+        "mainSrc": "./assets/Portfolio/Visualization/Qatar_Heights_Peshawer/02.webp",
+        "category": "visualization",
+        "id": 9
       }
     ],
     "architecture": [
