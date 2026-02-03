@@ -557,7 +557,6 @@
           const response = await fetch("./portfolio.json");
           const data = await response.json();
 
-          // Find the specific category (architecture, interior, etc)
           const categoryKey = category.toLowerCase();
           const project = data.portfolio[categoryKey]
             ? data.portfolio[categoryKey][id]
@@ -580,7 +579,6 @@
           const gallery = document.getElementById("image-gallery");
 
           // Start HTML construction
-          // 1. Feature Image (Full Width)
           let html = `
                     <div class="row" data-aos="fade-up">
                         <div class="col-12">

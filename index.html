@@ -297,10 +297,7 @@
                     data-splitout="none"
                     data-responsive_offset="on"
                   >
-                    <!-- <a href="#about" class="btn js-target-scroll" style="z-index: 10;"
-                      >Discover more <i class="icon-next"></i
-                      ><i class="fa-solid fa-arrow-right-long"></i
-                    ></a> -->
+                
                   </div>
                 </li>
                 <!-- Slide 2 -->
@@ -398,10 +395,7 @@
                     data-splitout="none"
                     data-responsive_offset="on"
                   >
-                    <!-- <a href="#about" class="btn js-target-scroll"
-                      >Discover more <i class="icon-next"></i>
-                      <i class="fa-solid fa-arrow-right-long"></i>
-                    </a> -->
+                  
                   </div>
                 </li>
                 <!-- Slide 3 -->
@@ -500,10 +494,6 @@
                     data-splitout="none"
                     data-responsive_offset="on"
                   >
-                    <!-- <a href="#about" class="btn js-target-scroll"
-                      >Discover more <i class="icon-next"></i
-                      ><i class="fa-solid fa-arrow-right-long"></i
-                    ></a> -->
                   </div>
                 </li>
               </ul>
@@ -675,13 +665,6 @@
                 <span class="badge__char">0</span>
                 <span class="badge__char">1</span>
                 <span class="badge__char">7</span>
-                <!-- <figure class="about-logoimage mb-0">
-                  <img
-                    src="./assets/images/Rcube_logo.webp"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </figure> -->
               </div>
             </div>
           </div>
@@ -705,23 +688,6 @@
                 accuracy, and buildability, we transform ideas into
                 well-planned, realistic, and inspiring environments.
               </p>
-              <!-- <div class="about-button">
-                <a class="read_more text-decoration-none" href="./about.html"
-                  >Read More</a
-                >
-                <a
-                  class="image-button text-decoration-none"
-                  href="./about.html"
-                >
-                  <figure class="arrow mb-0">
-                    <img
-                      src="./assets/images/arrow.webp"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </figure>
-                </a>
-              </div> -->
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 order-md-3 order-2">
@@ -972,7 +938,6 @@
           }
         }
 
-        /* Initial states for animations (hidden) */
         .anim-title,
         .anim-divider,
         .anim-bg-num,
@@ -983,7 +948,6 @@
           opacity: 0;
         }
 
-        /* Trigger animations when in-view */
         .work-section.in-view .anim-title {
           animation: slideInLeft 1s ease-out forwards;
         }
@@ -1442,14 +1406,11 @@
     <script src="/js/jquery.min.hero.js"></script>
     <script>
       (function () {
-        // Capture the hero jQuery instance and restore the previous global jQuery
         var hero = jQuery.noConflict(true);
         window.jQueryHero = hero;
         window.$hero = hero;
-        // Save current globals (main site jQuery) so we can restore later
         window._prevJQ = window.jQuery;
         window._prev$ = window.$;
-        // Temporarily make hero jQuery the global jQuery for following slider scripts
         window.jQuery = hero;
         window.$ = hero;
       })();
@@ -1476,9 +1437,8 @@
     <script src="js/rev-slider/revolution.extension.video.min.js"></script>
     <script src="js/interface.js"></script>
     <script>
-      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event("resize"));
       (function () {
-        // Restore main/global jQuery after rev-slider and interface scripts have loaded
         window.jQuery = window._prevJQ;
         window.$ = window._prev$;
         try {
@@ -1489,13 +1449,11 @@
     </script>
     <script>
       window.addEventListener("load", () => {
-        // Wait for the browser to be idle (not busy with animations or text)
         if ("requestIdleCallback" in window) {
           requestIdleCallback(() => {
             prefetchPortfolioImages();
           });
         } else {
-          // Fallback for older browsers: wait 3 seconds after load
           setTimeout(prefetchPortfolioImages, 3000);
         }
       });
@@ -1504,14 +1462,11 @@
         fetch("./portfolio.json")
           .then((res) => res.json())
           .then((data) => {
-            // Pick the first 6 images from 'featured' or 'architecture' to preload
             const imagesToPreload =
               data.portfolio.featured || data.portfolio.architecture;
-
             imagesToPreload.slice(0, 6).forEach((project) => {
               const img = new Image();
               img.src = project.mainSrc;
-              console.log("Preloaded in background:", project.mainSrc);
             });
           });
       }

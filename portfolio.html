@@ -152,9 +152,7 @@
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         background: #fff;
-        /* CSS Containment for better rendering performance */
         contain: layout style paint;
-        /* Reduce repaints for offscreen cards */
         content-visibility: auto;
       }
 
@@ -178,7 +176,6 @@
           transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
           opacity 0.6s ease-in-out;
         display: block;
-        /* Prepare for transform animations */
         will-change: transform;
       }
 
@@ -341,7 +338,7 @@
       }
       @media (max-width: 480px) {
         .banner-section-2 {
-          padding-top: 65px !important;
+          padding-top: 120px !important;
           height: 100vh;
         }
       }
@@ -589,7 +586,6 @@
           <div class="logo-marquee-slide">
             <img src="./assets/images/hl.webp" alt="Partner 4" />
           </div>
-          <!-- Duplicate set for seamless looping (8 duplicates to match the calculation in CSS) -->
           <div class="logo-marquee-slide">
             <img src="./assets/images/0001.webp" alt="Partner 1" />
           </div>
@@ -834,7 +830,7 @@
     <script src="assets/js/animation_links.js"></script>
     <script src="assets/js/animation.js"></script>
     <script>
-      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event("resize"));
       // Load portfolio data from JSON
       let portfolioData = {};
       let currentPage = 1;
@@ -858,7 +854,7 @@
 
         const options = {
           root: null,
-          rootMargin: "50px", // Load images 50px before they enter viewport
+          rootMargin: "50px",
           threshold: 0.01,
         };
 
@@ -868,23 +864,19 @@
               const img = entry.target;
               const figure = img.closest("figure");
 
-              // Load the image
               const src = img.getAttribute("data-src");
               if (src) {
-                // Add blur effect while loading
                 figure?.classList.add("loading");
 
                 img.src = src;
                 img.removeAttribute("data-src");
 
-                // Handle successful load
                 img.onload = () => {
                   img.classList.add("loaded");
                   figure?.classList.remove("loading");
                   figure?.classList.add("loaded");
                 };
 
-                // Handle load errors
                 img.onerror = () => {
                   img.classList.add("error");
                   figure?.classList.remove("loading");
@@ -904,19 +896,15 @@
 
         let items = [];
 
-        // 1. DATA SOURCE SELECTION
         if (currentCategory === "all") {
-          // Only show items from the "featured" section of your JSON
           items = portfolioData.featured || [];
         } else {
-          // Show all items from the specific category
           const catKey = Object.keys(portfolioData).find(
             (k) => k.toLowerCase() === currentCategory.toLowerCase(),
           );
           items = portfolioData[catKey] || [];
         }
 
-        // 2. PAGINATION CALCULATION
         const totalPages = Math.ceil(items.length / itemsPerPage);
         const startIndex = (currentPage - 1) * itemsPerPage;
         const paginatedItems = items.slice(
@@ -926,9 +914,7 @@
 
         row.innerHTML = "";
 
-        // 3. RENDER WITH UNIFORM 3-COLUMN GRID (2x3 layout)
         paginatedItems.forEach((project, index) => {
-          // All items same size - 3 column grid
           const colClass = "col-lg-4 col-md-6 col-sm-12 col-12";
           const figureClass = "tab-image mb-0";
 
@@ -982,7 +968,6 @@
           row.insertAdjacentHTML("beforeend", html);
         });
 
-        // Initialize Intersection Observer for new images
         initIntersectionObserver();
         const lazyImages = row.querySelectorAll(".lazy-image");
         lazyImages.forEach((img) => imageObserver.observe(img));
@@ -993,7 +978,7 @@
       function renderPaginationUI(totalPages) {
         const nav = document.getElementById("portfolio-pagination");
         nav.innerHTML = "";
-        if (totalPages <= 1) return; // Hide if only 1 page
+        if (totalPages <= 1) return;
 
         for (let i = 1; i <= totalPages; i++) {
           const btn = document.createElement("button");
@@ -1011,40 +996,32 @@
         }
       }
 
-      // Handle Tab Switching with debouncing
       let tabSwitchTimeout;
       document.querySelectorAll(".nav-tabs a").forEach((link) => {
         link.addEventListener("click", function (e) {
           e.preventDefault();
 
-          // Clear any pending tab switch
           clearTimeout(tabSwitchTimeout);
 
           document
             .querySelectorAll(".nav-tabs a")
             .forEach((l) => l.classList.remove("active"));
           this.classList.add("active");
-
           currentCategory = this.getAttribute("href").replace("#", "");
-          currentPage = 1; // Reset to page 1
-
-          // Debounce rendering to avoid rapid re-renders
+          currentPage = 1;
           tabSwitchTimeout = setTimeout(() => {
             renderPortfolio();
           }, 100);
         });
       });
 
-      // ===== PERFORMANCE MONITORING =====
       if ("PerformanceObserver" in window) {
         try {
           const observer = new PerformanceObserver((list) => {
             for (const entry of list.getEntries()) {
-              // Monitor Largest Contentful Paint
               if (entry.entryType === "largest-contentful-paint") {
                 console.log(`LCP: ${entry.renderTime || entry.loadTime}ms`);
               }
-              // Monitor Layout Shifts
               if (entry.entryType === "layout-shift" && !entry.hadRecentInput) {
                 console.log(`Layout Shift: ${entry.value}`);
               }
@@ -1058,8 +1035,6 @@
           console.log("Performance monitoring not available");
         }
       }
-
-      // Cleanup observer on page unload
       window.addEventListener("beforeunload", () => {
         if (imageObserver) {
           imageObserver.disconnect();
