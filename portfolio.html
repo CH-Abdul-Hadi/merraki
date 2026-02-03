@@ -5,7 +5,7 @@
     <!-- /SEO Ultimate -->
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta charset="utf-8" />
     <link
@@ -834,6 +834,7 @@
     <script src="assets/js/animation_links.js"></script>
     <script src="assets/js/animation.js"></script>
     <script>
+      window.dispatchEvent(new Event('resize'));
       // Load portfolio data from JSON
       let portfolioData = {};
       let currentPage = 1;

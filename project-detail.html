@@ -4,7 +4,7 @@
     <title>Project Details | Rcubes Design</title>
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta charset="utf-8" />
     <link
@@ -542,6 +542,7 @@
     </script>
 
     <script>
+      window.dispatchEvent(new Event('resize'));
       async function loadProjectDetails() {
         try {
           const params = new URLSearchParams(window.location.search);

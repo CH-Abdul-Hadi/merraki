@@ -5,7 +5,7 @@
     <!-- /SEO Ultimate -->
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+      content="width=device-width, initial-scale=1, maximum-scale=1 "
     />
     <meta charset="utf-8" />
     <link
@@ -51,6 +51,17 @@
     />
     <link href="css/style.css" rel="stylesheet" media="screen" />
     <!-- slider animations css-->
+    <!-- email js  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("GFdkElZQTfFFzfJP5");
+      })();
+    </script>
+    <!-- email js  -->
   </head>
 
   <body>
@@ -224,7 +235,7 @@
               </div>
               <h5>Location:</h5>
               <p class="mb-0 text-size-18">
-                121 King Street, Melbourne Victoria 3000 Australia
+                121 Street, Lahore Pakistan
               </p>
             </div>
           </div>
@@ -298,11 +309,8 @@
                   <div class="content" data-aos="fade-right">
                     <h6>Get in Touch</h6>
                     <h2>Send us a Message</h2>
-                    <form
-                      id="contactpage"
-                      method="POST"
-                      action="./contact-form.php"
-                    >
+
+                    <form id="contactpage">
                       <div class="form-group">
                         <input
                           type="text"
@@ -349,8 +357,8 @@
                         ></textarea>
                       </div>
                       <div class="button">
-                        <button type="submit" class="send_now">
-                          Send Now
+                        <button type="submit" id="submit-btn" class="send_now">
+                          <span id="btn-text">Send Now</span>
                           <i class="arrow fa-thin fa-arrow-right"></i>
                         </button>
                       </div>
@@ -595,5 +603,37 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/animation_links.js"></script>
     <script src="assets/js/animation.js"></script>
+
+    <script>
+      window.dispatchEvent(new Event('resize'));
+      const btn = document.getElementById("submit-btn");
+      const btnText = document.getElementById("btn-text");
+
+      document
+        .getElementById("contactpage")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          btnText.innerHTML = "Sending...";
+          btn.disabled = true;
+
+          emailjs.sendForm("service_l4317ac", "template_qsfs9g3", this).then(
+            () => {
+              btnText.innerHTML = "Send Now";
+              btn.disabled = false;
+              alert("Message sent successfully! We will get back to you soon.");
+              document.getElementById("contactpage").reset();
+            },
+            (err) => {
+              btnText.innerHTML = "Send Now";
+              btn.disabled = false;
+              alert(
+                "Failed to send message. Please try again. Error: " +
+                  JSON.stringify(err),
+              );
+            },
+          );
+        });
+    </script>
   </body>
 </html>
