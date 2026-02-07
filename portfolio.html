@@ -362,7 +362,6 @@
         left: 0;
         width: 100%;
         z-index: 9999;
-        background-color: rgba(50, 50, 50, 0.95) !important;
         padding-bottom: 20px;
         height: 90px;
       "
@@ -372,7 +371,7 @@
           position: absolute;
           z-index: 4;
           left: 0;
-          top: 0;
+          top: -16px;
           width: 45.47vmin;
           height: 40.7vmin;
           padding: 4.8vmin 2em 4.8vmin;
@@ -752,6 +751,12 @@
                       >
                         <img
                           src="./assets/images/icons8-fiverr-48.webp"
+                          onmouseover="
+                            this.src = './assets/images/icons8-fiverr-50_3.png'
+                          "
+                          onmouseout="
+                            this.src = './assets/images/icons8-fiverr-48.webp'
+                          "
                           style="
                             width: 3rem;
                             position: relative;
@@ -853,6 +858,39 @@
         .then((res) => res.json())
         .then((data) => {
           portfolioData = data.portfolio;
+
+          // Check for hash on load to set active category
+          if (window.location.hash) {
+            const hash = window.location.hash.substring(1).toLowerCase();
+            const validCategories = [
+              "architecture",
+              "interior",
+              "visualization",
+            ];
+            if (validCategories.includes(hash)) {
+              currentCategory = hash;
+
+              // Update active tab UI
+              document.querySelectorAll(".nav-tabs a").forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + hash) {
+                  link.classList.add("active");
+                }
+              });
+
+              // Scroll to portfolio section
+              setTimeout(() => {
+                const section = document.querySelector(".portfolio-section");
+                if (section) {
+                  window.scrollTo({
+                    top: section.offsetTop - 100,
+                    behavior: "smooth",
+                  });
+                }
+              }, 500);
+            }
+          }
+
           renderPortfolio();
         });
 

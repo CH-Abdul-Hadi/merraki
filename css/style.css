@@ -584,10 +584,10 @@ label.error {
   z-index: 4;
   left: 0;
   top: 0;
-  width: 19.47vmin;
-  height: 40.7vmin;
-  padding: 4.8vmin 2em 4.8vmin;
-  background-color: #2b2b2b;
+  width: 27vmin;
+  height: 30vmin;
+  padding: 3vmin 1em 3vmin;
+  /* background-color: #2b2b2b; */
   text-align: center;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -598,10 +598,10 @@ label.error {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 4vmin;
+  font-size: 2.5vmin;
   line-height: 1;
   color: #fff;
-  margin-left: -1rem;
+  margin-left: -0.5rem;
 }
 
 .brand:hover,
@@ -625,11 +625,12 @@ label.error {
 
 .slide-number {
   font-family: "Oswald", sans-serif;
-  margin-top: 8vmin;
+  margin-top: 10vmin;
+  width: 10vmin;
 }
 
 .slide-number .current-number {
-  font-size: 8vmin;
+  font-size: 3vmin;
   letter-spacing: 0.1em;
   line-height: 1;
 }
@@ -638,7 +639,7 @@ label.error {
   display: inline-block;
   position: relative;
   top: 14px;
-  font-size: 5vmin;
+  font-size: 3vmin;
   letter-spacing: 0.1em;
   color: #5e5e5e;
   vertical-align: top;
@@ -653,14 +654,13 @@ label.error {
 .header-phone {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
-  font-size: 0.81em;
+  font-size: 1em;
   letter-spacing: 0.32em;
   position: absolute;
-  padding-top: 1rem;
   z-index: 3;
   color: #fff;
-  left: 28vmin;
-  top: 5.9vmin;
+  left: 35vmin;
+  top: 2.5vmin;
 }
 
 @media (max-width: 480px) {
@@ -686,7 +686,7 @@ label.error {
 .vertical-panel,
 .vertical-panel-content {
   position: absolute;
-  width: 19.735vmin;
+  width: 12vmin;
   left: 0;
   bottom: 0;
   text-align: center;
@@ -775,8 +775,9 @@ label.error {
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 8vmin;
-  padding-bottom: 3vmin;
+  height: 7vmin;
+  padding-top: 2.5vmin;
+  padding-bottom: 2vmin;
   background-color: #2b2b2b;
 }
 
