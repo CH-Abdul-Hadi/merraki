@@ -667,11 +667,15 @@ label.error {
   .header-phone {
     display: none;
   }
+  .brand-panel{
+    display: none;
+  }
+  
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .header-phone {
-    display: none;
+    /* display: none; */
   }
 }
 
